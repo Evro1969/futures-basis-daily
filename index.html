@@ -19,32 +19,6 @@
   }
   h1 { font-size: 28px; margin-bottom: 4px; }
   .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
-  .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
-  .hero-card {
-    background: linear-gradient(135deg, var(--card-bg), #0f172a);
-    border: 1px solid var(--border); border-radius: 12px;
-    padding: 28px 16px; text-align: center;
-  }
-  .hero-card .name { font-size: 24px; font-weight: 700; margin-bottom: 2px; }
-  .hero-card .sub { font-size: 11px; color: var(--text-secondary); margin-bottom: 10px; }
-  .hero-card .signal { margin-bottom: 10px; }
-  .hero-card .action-row { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 8px; }
-  .hero-card .action-row .label { font-size: 11px; color: var(--text-secondary); }
-  .hero-card .action-row .arrow { font-size: 14px; }
-  .hero-card .action-tag {
-    display: inline-block; padding: 3px 10px; border-radius: 5px;
-    font-size: 12px; font-weight: 700;
-  }
-  .act-build { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.5); }
-  .act-add { background: rgba(6,182,212,0.2); color: #06b6d4; border: 1px solid rgba(6,182,212,0.5); }
-  .act-hold { background: rgba(234,179,8,0.2); color: #eab308; border: 1px solid rgba(234,179,8,0.5); }
-  .act-cut { background: rgba(249,115,22,0.2); color: #f97316; border: 1px solid rgba(249,115,22,0.5); }
-  .hero-card .reason { font-size: 12px; color: var(--text-secondary); line-height: 1.6; padding: 0 4px; }
-  .hero-card .advice { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
-  .if-color { color: #3b82f6; }
-  .ih-color { color: #eab308; }
-  .ic-color { color: #22c55e; }
-  .im-color { color: #06b6d4; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
   .card {
     background: var(--card-bg); border: 1px solid var(--border);
@@ -56,12 +30,8 @@
   th { color: var(--text-secondary); font-weight: 500; text-align: left; background: rgba(255,255,255,0.02); }
   th:first-child, td:first-child { text-align: left; }
   .neg { color: #22c55e; }
-  .pos { color: #ef4444; }
   .highlight { font-weight: 700; }
-  .signal-tag {
-    display: inline-block; padding: 4px 12px; border-radius: 6px;
-    font-size: 12px; font-weight: 600;
-  }
+  .signal-tag { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; }
   .sig-defend { background: #ef444422; color: #ef4444; border: 1px solid #ef444444; }
   .sig-light { background: #f9731622; color: #f97316; border: 1px solid #f9731644; }
   .sig-neutral { background: #eab30822; color: #eab308; border: 1px solid #eab30844; }
@@ -70,15 +40,12 @@
   .footer { text-align: center; color: var(--text-secondary); font-size: 12px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
   .analysis { font-size: 14px; line-height: 1.9; }
   .analysis strong { color: var(--cyan); }
-  .advice-box { padding: 14px 18px; border-radius: 8px; margin-top: 12px; font-size: 14px; line-height: 1.7; }
+  .advice-box { padding: 14px 18px; border-radius: 8px; margin-top: 14px; font-size: 14px; line-height: 1.7; }
   .advice-heavy { background: rgba(6,182,212,0.1); border-left: 3px solid var(--cyan); color: #cbd5e1; }
-  .advice-bull { background: rgba(34,197,94,0.1); border-left: 3px solid var(--green); color: #cbd5e1; }
-  .advice-defend { background: rgba(239,68,68,0.1); border-left: 3px solid var(--red); color: #cbd5e1; }
-  .advice-neutral { background: rgba(234,179,8,0.1); border-left: 3px solid var(--yellow); color: #cbd5e1; }
-  .advice-light { background: rgba(249,115,22,0.1); border-left: 3px solid var(--orange); color: #cbd5e1; }
   .advice-icon { font-size: 18px; margin-right: 6px; }
-  .rate-box { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
-  .rate-box strong { color: var(--green); }
+  .advice-action { display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+  .act-build { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.5); }
+  .act-add { background: rgba(6,182,212,0.2); color: #06b6d4; border: 1px solid rgba(6,182,212,0.5); }
 </style>
 </head>
 <body>
@@ -94,85 +61,101 @@
       <tr><td>升水 / 平水 (> -0.5%)</td><td><span class="signal-tag sig-defend">防御</span></td><td>控制风险，降低敞口</td><td></td><td></td><td></td><td></td></tr>
       <tr><td>浅贴水 (-0.5% ~ 3%)</td><td><span class="signal-tag sig-light">轻仓</span></td><td>小仓位参与，耐心等待</td><td></td><td></td><td></td><td></td></tr>
       <tr><td>中度贴水 (3% ~ 6%)</td><td><span class="signal-tag sig-neutral">中性</span></td><td>维持现有仓位，观望为主</td><td></td><td></td><td></td><td></td></tr>
-      <tr style="background: rgba(34,197,94,0.06);"><td>深度贴水 (6% ~ 10%)</td><td><span class="signal-tag sig-bull">偏多</span></td><td>适当加仓，关注贴水修复</td><td></td><td style="text-align:center"><span class="signal-tag sig-bull">← IH</span></td><td></td><td></td></tr>
-      <tr style="background: rgba(6,182,212,0.06);"><td>极端贴水 (> 10%)</td><td><span class="signal-tag sig-heavy">加仓</span></td><td>积极布局，把握贴水安全边际</td><td style="text-align:center"><span class="signal-tag sig-heavy">← IF</span></td><td></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IC</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IM</span></td></tr>
+      <tr><td>深度贴水 (6% ~ 10%)</td><td><span class="signal-tag sig-bull">偏多</span></td><td>适当加仓，关注贴水修复</td><td></td><td></td><td></td><td></td></tr>
+      <tr style="background: rgba(6,182,212,0.06);"><td>极端贴水 (> 10%)</td><td><span class="signal-tag sig-heavy">加仓</span></td><td>积极布局，把握贴水安全边际</td><td style="text-align:center"><span class="signal-tag sig-heavy">← IF</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IH</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IC</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IM</span></td></tr>
     </tbody>
   </table>
 </div>
 
 <div class="grid-2">
   <div class="card">
-    <h3>IF 沪深300 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 4691.88</span></h3>
+    <h3>IF 沪深300 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 4702.02</span></h3>
     <table>
       <thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期(天)</th><th>基差</th><th>基差率</th></tr></thead>
       <tbody>
-        <tr><td>当月</td><td>IF2608</td><td>4670.8</td><td>35,497</td><td>11</td><td class="neg">-21.1</td><td class="neg">-0.45%</td></tr>
-        <tr style="background:rgba(59,130,246,0.06)"><td><strong>主力 ⭐</strong></td><td>IF2609</td><td>4639.2</td><td>141,926</td><td>39</td><td class="neg">-52.7</td><td class="neg highlight">-1.12%</td></tr>
-        <tr><td>次主力</td><td>IF2612</td><td>4558.8</td><td>61,311</td><td>130</td><td class="neg">-133.1</td><td class="neg">-2.84%</td></tr>
-        <tr><td>隔季</td><td>IF2703</td><td>4485.4</td><td>20,486</td><td>221</td><td class="neg">-206.5</td><td class="neg">-4.40%</td></tr>
+        <tr><td>当月</td><td>IF2608</td><td>4675.2</td><td>36,037</td><td>11</td><td class="neg">-26.8</td><td class="neg">-0.57%</td></tr>
+        <tr style="background:rgba(59,130,246,0.06)"><td><strong>主力 ⭐</strong></td><td>IF2609</td><td>4644.6</td><td>143,433</td><td>39</td><td class="neg">-57.4</td><td class="neg highlight">-1.22%</td></tr>
+        <tr><td>次主力</td><td>IF2612</td><td>4565.2</td><td>61,714</td><td>130</td><td class="neg">-136.8</td><td class="neg">-2.91%</td></tr>
+        <tr><td>隔季</td><td>IF2703</td><td>4489.0</td><td>20,883</td><td>221</td><td class="neg">-213.0</td><td class="neg">-4.53%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy"><span class="advice-icon">⚡</span><strong>调仓建议：</strong>主力年化贴水-10.5%，处于极端贴水区间。贴水深度提供了约10%的年化安全边际，展期收益可观。建议在当前位置逢低分批加仓沪深300多头，利用贴水收敛获取增强收益。若贴水继续扩大至-15%以上，需重新评估宏观风险。</div>
+    <div class="advice-box advice-heavy">
+      <span class="advice-icon">⚡</span>
+      <span class="advice-action act-add">加仓</span>
+      <strong>调仓建议：</strong>主力年化贴水-11.4%，极端贴水区间。四大品种贴水全面加深至极端阈值以上，全市场恐慌情绪共振。IF作为大盘蓝筹代表，其贴水深度提供的安全边际接近11%年化展期收益。建议适当加仓IF多头，远月合约可锁定更优贴水。风险点关注宏观政策与资金面变化。
+    </div>
   </div>
   <div class="card">
-    <h3>IH 上证50 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 2963.66</span></h3>
+    <h3>IH 上证50 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 2967.73</span></h3>
     <table>
       <thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期(天)</th><th>基差</th><th>基差率</th></tr></thead>
       <tbody>
-        <tr><td>当月</td><td>IH2608</td><td>2952.6</td><td>19,889</td><td>11</td><td class="neg">-11.1</td><td class="neg">-0.37%</td></tr>
-        <tr style="background:rgba(234,179,8,0.06)"><td><strong>主力 ⭐</strong></td><td>IH2609</td><td>2933.0</td><td>66,592</td><td>39</td><td class="neg">-30.7</td><td class="neg highlight">-1.03%</td></tr>
-        <tr><td>次主力</td><td>IH2612</td><td>2890.2</td><td>25,164</td><td>130</td><td class="neg">-73.5</td><td class="neg">-2.48%</td></tr>
-        <tr><td>隔季</td><td>IH2703</td><td>2863.6</td><td>4,254</td><td>221</td><td class="neg">-100.1</td><td class="neg">-3.38%</td></tr>
+        <tr><td>当月</td><td>IH2608</td><td>2956.0</td><td>20,366</td><td>11</td><td class="neg">-11.7</td><td class="neg">-0.40%</td></tr>
+        <tr style="background:rgba(234,179,8,0.06)"><td><strong>主力 ⭐</strong></td><td>IH2609</td><td>2936.0</td><td>67,352</td><td>39</td><td class="neg">-31.7</td><td class="neg highlight">-1.07%</td></tr>
+        <tr><td>次主力</td><td>IH2612</td><td>2893.2</td><td>25,354</td><td>130</td><td class="neg">-74.5</td><td class="neg">-2.51%</td></tr>
+        <tr><td>隔季</td><td>IH2703</td><td>2865.8</td><td>4,322</td><td>221</td><td class="neg">-101.9</td><td class="neg">-3.43%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-bull"><span class="advice-icon">📈</span><strong>调仓建议：</strong>主力年化贴水-9.7%，处于深度贴水区间但未触及极端阈值。上证50是四大品种中贴水最浅的，大盘蓝筹的对冲抛压相对温和。当前仓位可维持不变，若贴水进一步加深至-10%以上，可适度加仓；若贴水收窄至-6%以下，说明情绪回暖，届时追加减仓机会。</div>
+    <div class="advice-box advice-heavy">
+      <span class="advice-icon">⚡</span>
+      <span class="advice-action act-add">加仓</span>
+      <strong>调仓建议：</strong>主力年化贴水-10.0%，首次触及极端贴水阈值。IH从深度贴水区间上移至极端区间，市场对大盘蓝筹的悲观情绪在今日下午进一步加深。上证50以银行、保险等稳健权重股为主，在极端贴水位置具有较高的胜率。建议适当加仓，分批次进入避免一次性追入。
+    </div>
   </div>
   <div class="card">
-    <h3>IC 中证500 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 8001.47</span></h3>
+    <h3>IC 中证500 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 8030.95</span></h3>
     <table>
       <thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期(天)</th><th>基差</th><th>基差率</th></tr></thead>
       <tbody>
-        <tr><td>当月</td><td>IC2608</td><td>7946.6</td><td>42,128</td><td>11</td><td class="neg">-54.9</td><td class="neg">-0.69%</td></tr>
-        <tr style="background:rgba(34,197,94,0.06)"><td><strong>主力 ⭐</strong></td><td>IC2609</td><td>7872.6</td><td>160,636</td><td>39</td><td class="neg">-128.9</td><td class="neg highlight">-1.61%</td></tr>
-        <tr><td>次主力</td><td>IC2612</td><td>7698.8</td><td>76,016</td><td>130</td><td class="neg">-302.7</td><td class="neg">-3.78%</td></tr>
-        <tr><td>隔季</td><td>IC2703</td><td>7528.4</td><td>19,007</td><td>221</td><td class="neg">-473.1</td><td class="neg">-5.91%</td></tr>
+        <tr><td>当月</td><td>IC2608</td><td>7955.2</td><td>43,420</td><td>11</td><td class="neg">-75.8</td><td class="neg">-0.94%</td></tr>
+        <tr style="background:rgba(34,197,94,0.06)"><td><strong>主力 ⭐</strong></td><td>IC2609</td><td>7881.4</td><td>163,714</td><td>39</td><td class="neg">-149.6</td><td class="neg highlight">-1.86%</td></tr>
+        <tr><td>次主力</td><td>IC2612</td><td>7707.6</td><td>76,917</td><td>130</td><td class="neg">-323.4</td><td class="neg">-4.03%</td></tr>
+        <tr><td>隔季</td><td>IC2703</td><td>7539.2</td><td>19,364</td><td>221</td><td class="neg">-491.8</td><td class="neg">-6.12%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy"><span class="advice-icon">⚡</span><strong>调仓建议：</strong>主力年化贴水-15.1%，为本日贴水最深的品种。中证500的中小企业成分股被市场过度恐慌定价，贴水提供的安全边际极为丰厚。建议积极加仓IC多头，利用接近15%的年化展期收益和潜在的贴水修复双击。注意隔季IC2703贴水-5.91%，远期悲观情绪严重，反转型机会明确，可分批在远期合约建仓锁定更高贴水收益。</div>
+    <div class="advice-box advice-heavy">
+      <span class="advice-icon">⚡</span>
+      <span class="advice-action act-build">建仓</span>
+      <strong>调仓建议：</strong>主力年化贴水-17.4%，为本日贴水最深的品种。中证500的中小企业成分股被极度过量对冲，17.4%的年化贴水意味着即使指数全年横盘，仅贴水收敛就能产生接近20%的增强收益。隔季IC2703贴水-6.12%进一步确认远期悲观。建议积极建仓IC多头，可在远月合约建仓以锁定当前高贴水。风险提示：若基本面进一步恶化导致贴水扩大至-20%以上，需重新评估。
+    </div>
   </div>
   <div class="card">
-    <h3>IM 中证1000 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 7717.87</span></h3>
+    <h3>IM 中证1000 — 期限结构 <span style="color:var(--text-secondary);font-weight:400;font-size:14px">现货 7733.90</span></h3>
     <table>
       <thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期(天)</th><th>基差</th><th>基差率</th></tr></thead>
       <tbody>
-        <tr><td>当月</td><td>IM2608</td><td>7681.2</td><td>72,461</td><td>11</td><td class="neg">-36.7</td><td class="neg">-0.48%</td></tr>
-        <tr style="background:rgba(6,182,212,0.06)"><td><strong>主力 ⭐</strong></td><td>IM2609</td><td>7607.2</td><td>233,495</td><td>39</td><td class="neg">-110.7</td><td class="neg highlight">-1.43%</td></tr>
-        <tr><td>次主力</td><td>IM2612</td><td>7408.8</td><td>116,379</td><td>130</td><td class="neg">-309.1</td><td class="neg">-4.00%</td></tr>
-        <tr><td>隔季</td><td>IM2703</td><td>7213.0</td><td>39,443</td><td>221</td><td class="neg">-504.9</td><td class="neg">-6.54%</td></tr>
+        <tr><td>当月</td><td>IM2608</td><td>7682.8</td><td>73,842</td><td>11</td><td class="neg">-51.1</td><td class="neg">-0.66%</td></tr>
+        <tr style="background:rgba(6,182,212,0.06)"><td><strong>主力 ⭐</strong></td><td>IM2609</td><td>7607.2</td><td>236,892</td><td>39</td><td class="neg">-126.7</td><td class="neg highlight">-1.64%</td></tr>
+        <tr><td>次主力</td><td>IM2612</td><td>7413.2</td><td>117,067</td><td>130</td><td class="neg">-320.7</td><td class="neg">-4.15%</td></tr>
+        <tr><td>隔季</td><td>IM2703</td><td>7220.0</td><td>40,143</td><td>221</td><td class="neg">-513.9</td><td class="neg">-6.64%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy"><span class="advice-icon">⚡</span><strong>调仓建议：</strong>主力年化贴水-13.4%，极端贴水信号明确。中证1000弹性最大，大幅贴水往往是情绪极度悲观的信号，历史上此类位置对应较高的后续胜率。建议逢低加仓IM多头，但小盘波动性大，建议设置-8%止损线。隔季IM2703贴水-6.54%为全品种最深，可在远月合约锁定更高的贴水收益，做多远月吃贴水+基差修复的双重红利。</div>
+    <div class="advice-box advice-heavy">
+      <span class="advice-icon">⚡</span>
+      <span class="advice-action act-add">加仓</span>
+      <strong>调仓建议：</strong>主力年化贴水-15.3%，极端贴水信号明确。IM2609持仓23.7万手为四大合约之最，极端做空情绪在小盘股上集中释放。隔季IM2703贴水-6.64%为全品种最深，远月悲观定价最为极致。从逆向投资角度，全面恐慌往往是底部区域的信号。建议加仓IM多头，弹性最大但波动也最大，需严格设置止损并控制单品种集中度。
+    </div>
   </div>
 </div>
 
 <div class="card">
   <h3>📝 各指数独立分析</h3>
   <div class="analysis">
-    <p><strong>IF（沪深300）— 年化贴水率10.5%，极端贴水</strong></p>
-    <p>主力合约IF2609持仓14.2万手，为四大品种中持仓最集中的大盘品种。年化贴水-10.5%触发极端贴水阈值，市场对大盘蓝筹信心不足。当月→隔季贴水从-0.45%陡峭化至-4.40%，但斜率小于中小盘，机构对沪深300中长期定价相对理性。当前贴水深度提供约10%年化安全边际，适合逢低分批加仓，关注展期收益的持续兑现。</p>
-    <p><strong>IH（上证50）— 年化贴水率9.7%，深度贴水</strong></p>
-    <p>上证50是今日最抗跌的品种，贴水处于深度区间但未至极端。IH2609持仓仅6.7万手，机构对冲需求相对较小。大盘金融、消费权重股的基本面支撑使IH贴水幅度最低。当前可维持现有仓位，静待贴水进一步加深至-10%以上时加仓，或贴水收窄至-6%以下时追加减仓。</p>
-    <p><strong>IC（中证500）— 年化贴水率15.1%，极端贴水</strong></p>
-    <p>中证500贴水最深，主力IC2609年化-15.1%，隔季IC2703贴水-5.91%。市场对中小企业的悲观被极致放大——从反向投资角度看，往往意味着板块已被过度抛弃。接近15%的年化贴水意味着即便指数横盘一年，仅凭贴水收敛就能获得可观的增强收益，若叠加指数反弹则形成双击。建议积极加仓，重点在IC远期合约建仓以锁定更高贴水。</p>
-    <p><strong>IM（中证1000）— 年化贴水率13.4%，极端贴水</strong></p>
-    <p>中证1000贴水深度仅次于IC，主力IM2609年化-13.4%。IM2609持仓23.3万手为四大合约中最大，市场对小盘对冲需求旺盛，但过度对冲往往酝酿反转。隔季IM2703贴水-6.54%为全品种最深，远期极度保守定价。建议逢低加仓IM多头，小盘弹性最大但波动也最大，需严格设置-8%止损线控制回撤。</p>
+    <p><strong>IF（沪深300）— 年化贴水率11.4%，极端贴水</strong></p>
+    <p>现货4702.02，主力IF2609收4644.6，贴水-57.4点。年化贴水-11.4%触发极端贴水阈值。IF2609持仓14.3万手，当日减仓7585手，多空博弈中空头力量仍占主导。期限结构从当月-0.57%陡峭化至隔季-4.53%，呈现典型深度contango，展期收益可观。</p>
+    <p><strong>IH（上证50）— 年化贴水率10.0%，极端贴水（← 新触发）</strong></p>
+    <p>现货2967.73，主力IH2609收2936.0，贴水-31.7点。IH今日从深度贴水区间上移至极端贴水阈值（年化-10.0%），市场对大盘蓝筹的悲观情绪在下午盘面进一步恶化。上证50以金融消费权重股为主，在极端贴水位置历史上胜率较高。IH2609持仓6.7万手，仓位相对轻便。</p>
+    <p><strong>IC（中证500）— 年化贴水率17.4%，极端贴水（全品种最深）</strong></p>
+    <p>现货8030.95，主力IC2609收7881.4，贴水-149.6点。年化-17.4%是四大品种中最深的贴水。隔季IC2703贴水-6.12%，远期定价极度悲观。中证500的中小企业成分股被大量做空套保资金压制，但极致的贴水往往酝酿极致的反转。</p>
+    <p><strong>IM（中证1000）— 年化贴水率15.3%，极端贴水</strong></p>
+    <p>现货7733.90，主力IM2609收7607.2，贴水-126.7点。IM2609持仓23.7万手为全品种最大合约，当日减仓4505手但总量仍处高位。隔季IM2703贴水高达-6.64%，反映市场对小盘股未来半年的定价极度保守。从反向投资角度，小盘股的全面恐慌往往是底部区域的先行指标。</p>
   </div>
 </div>
 
 <div class="footer">
-  本报告由自动化系统生成 | 数据来源：中国金融期货交易所（通过通达信MCP `tdx_futures_quotes`）| 仅供参考，不构成投资建议<br>
-  生成时间：2026-08-10 15:15 | 基差 = 期货价格 - 现货指数价格，负值=贴水<br>
-  年化贴水率 = (期货价-现货价)/现货价 / (到期天数/365) | 调仓建议基于贴水信号框架，不构成具体操作指引<br>
+  本报告由自动化系统生成 | 数据来源：中国金融期货交易所（通达信MCP `tdx_futures_quotes` 收盘数据）| 仅供参考，不构成投资建议<br>
+  生成时间：2026-08-10 收盘后 | 基差 = 期货价格 - 现货指数价格，负值=贴水<br>
+  年化贴水率 = 基差率 / (到期天数/365) | 调仓建议基于贴水信号框架<br>
   🔗 在线地址：<a href="https://evro1969.github.io/futures-basis-daily/" style="color:var(--cyan)">https://evro1969.github.io/futures-basis-daily/</a>
 </div>
 </body>
