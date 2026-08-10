@@ -28,6 +28,18 @@
   .hero-card .name { font-size: 24px; font-weight: 700; margin-bottom: 2px; }
   .hero-card .sub { font-size: 11px; color: var(--text-secondary); margin-bottom: 10px; }
   .hero-card .signal { margin-bottom: 10px; }
+  .hero-card .action-row { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 8px; }
+  .hero-card .action-row .label { font-size: 11px; color: var(--text-secondary); }
+  .hero-card .action-row .arrow { font-size: 14px; }
+  .hero-card .action-tag {
+    display: inline-block; padding: 3px 10px; border-radius: 5px;
+    font-size: 12px; font-weight: 700;
+  }
+  .act-build { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.5); }
+  .act-add { background: rgba(6,182,212,0.2); color: #06b6d4; border: 1px solid rgba(6,182,212,0.5); }
+  .act-hold { background: rgba(234,179,8,0.2); color: #eab308; border: 1px solid rgba(234,179,8,0.5); }
+  .act-cut { background: rgba(249,115,22,0.2); color: #f97316; border: 1px solid rgba(249,115,22,0.5); }
+  .hero-card .reason { font-size: 12px; color: var(--text-secondary); line-height: 1.6; padding: 0 4px; }
   .hero-card .advice { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
   .if-color { color: #3b82f6; }
   .ih-color { color: #eab308; }
@@ -79,25 +91,45 @@
     <div class="name if-color">IF</div>
     <div class="sub">沪深300</div>
     <div class="signal"><span class="signal-tag sig-heavy">⚡ 极端贴水</span></div>
-    <div class="advice">贴水深度提供安全边际，可适当加仓，关注展期收益</div>
+    <div class="action-row">
+      <span class="label">动作</span>
+      <span class="arrow">→</span>
+      <span class="action-tag act-add">📈 加仓</span>
+    </div>
+    <div class="reason">年化贴水-10.5%，贴水提供的安全边际充足，可逢低分批加仓沪深300多头</div>
   </div>
   <div class="hero-card">
     <div class="name ih-color">IH</div>
     <div class="sub">上证50</div>
     <div class="signal"><span class="signal-tag sig-bull">📈 深度贴水</span></div>
-    <div class="advice">蓝筹贴水相对较浅，维持现有仓位，等待更好的加仓时机</div>
+    <div class="action-row">
+      <span class="label">动作</span>
+      <span class="arrow">→</span>
+      <span class="action-tag act-hold">⏸ 维持</span>
+    </div>
+    <div class="reason">年化贴水-9.7%，贴水相对较浅，蓝筹基本面支撑较强，建议维持现有仓位等待</div>
   </div>
   <div class="hero-card">
     <div class="name ic-color">IC</div>
     <div class="sub">中证500</div>
     <div class="signal"><span class="signal-tag sig-heavy">⚡ 极端贴水</span></div>
-    <div class="advice">贴水最深的品种，可积极布局，分批建仓中小盘多头</div>
+    <div class="action-row">
+      <span class="label">动作</span>
+      <span class="arrow">→</span>
+      <span class="action-tag act-build">🏗️ 建仓</span>
+    </div>
+    <div class="reason">年化贴水-15.1%为全品种最深，中小企业被极度悲观定价，建议积极建仓IC多头</div>
   </div>
   <div class="hero-card">
     <div class="name im-color">IM</div>
     <div class="sub">中证1000</div>
     <div class="signal"><span class="signal-tag sig-heavy">⚡ 极端贴水</span></div>
-    <div class="advice">小盘贴水极致，逢低可加仓，需设置止损控制波动风险</div>
+    <div class="action-row">
+      <span class="label">动作</span>
+      <span class="arrow">→</span>
+      <span class="action-tag act-add">📈 加仓</span>
+    </div>
+    <div class="reason">年化贴水-13.4%，中证1000弹性最大，建议逢低加仓IM多头，设止损控制波动</div>
   </div>
 </div>
 
