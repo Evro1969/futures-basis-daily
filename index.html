@@ -42,30 +42,20 @@
   .analysis strong { color: var(--cyan); }
   .advice-box { padding: 14px 18px; border-radius: 8px; margin-top: 14px; font-size: 14px; line-height: 1.7; }
   .advice-heavy { background: rgba(6,182,212,0.1); border-left: 3px solid var(--cyan); color: #cbd5e1; }
+  .advice-bull { background: rgba(34,197,94,0.1); border-left: 3px solid var(--green); color: #cbd5e1; }
+  .advice-neutral { background: rgba(234,179,8,0.1); border-left: 3px solid var(--yellow); color: #cbd5e1; }
   .advice-icon { font-size: 18px; margin-right: 6px; }
   .advice-action { display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
   .act-build { background: rgba(34,197,94,0.2); color: #22c55e; border: 1px solid rgba(34,197,94,0.5); }
   .act-add { background: rgba(6,182,212,0.2); color: #06b6d4; border: 1px solid rgba(6,182,212,0.5); }
+  .act-hold { background: rgba(234,179,8,0.2); color: #eab308; border: 1px solid rgba(234,179,8,0.5); }
+  .threshold-note { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
 </style>
 </head>
 <body>
 
 <h1>📊 股指期货贴水日报</h1>
 <div class="subtitle">2026-08-10（周一）| 收盘后生成 | 数据来源：中国金融期货交易所（通达信中金所行情）</div>
-
-<div class="card">
-  <h3>📐 信号判断框架</h3>
-  <table>
-    <thead><tr><th>主力年化贴水率</th><th>市场信号</th><th>调仓方向</th><th>IF</th><th>IH</th><th>IC</th><th>IM</th></tr></thead>
-    <tbody>
-      <tr><td>升水 / 平水 (> -0.5%)</td><td><span class="signal-tag sig-defend">防御</span></td><td>控制风险，降低敞口</td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>浅贴水 (-0.5% ~ 3%)</td><td><span class="signal-tag sig-light">轻仓</span></td><td>小仓位参与，耐心等待</td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>中度贴水 (3% ~ 6%)</td><td><span class="signal-tag sig-neutral">中性</span></td><td>维持现有仓位，观望为主</td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>深度贴水 (6% ~ 10%)</td><td><span class="signal-tag sig-bull">偏多</span></td><td>适当加仓，关注贴水修复</td><td></td><td></td><td></td><td></td></tr>
-      <tr style="background: rgba(6,182,212,0.06);"><td>极端贴水 (> 10%)</td><td><span class="signal-tag sig-heavy">加仓</span></td><td>积极布局，把握贴水安全边际</td><td style="text-align:center"><span class="signal-tag sig-heavy">← IF</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IH</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IC</span></td><td style="text-align:center"><span class="signal-tag sig-heavy">← IM</span></td></tr>
-    </tbody>
-  </table>
-</div>
 
 <div class="grid-2">
   <div class="card">
@@ -79,10 +69,10 @@
         <tr><td>隔季</td><td>IF2703</td><td>4489.0</td><td>20,883</td><td>221</td><td class="neg">-213.0</td><td class="neg">-4.53%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy">
-      <span class="advice-icon">⚡</span>
-      <span class="advice-action act-add">加仓</span>
-      <strong>调仓建议：</strong>主力年化贴水-11.4%，极端贴水区间。四大品种贴水全面加深至极端阈值以上，全市场恐慌情绪共振。IF作为大盘蓝筹代表，其贴水深度提供的安全边际接近11%年化展期收益。建议适当加仓IF多头，远月合约可锁定更优贴水。风险点关注宏观政策与资金面变化。
+    <div class="advice-box advice-neutral">
+      <span class="advice-icon">⚖️</span>
+      <span class="advice-action act-hold">维持</span>
+      <strong>调仓建议：</strong>主力年化贴水-11.4%，处于中度贴水区间。贴水水平接近全样本中位数（-12.1%），属于正常偏悲观而非极端悲观。IF作为大盘代表，当前贴水提供的安全边际适中，建议维持现有仓位，观望为主。若贴水加深至-15%以上（深度区间），可考虑加仓；若收窄至-10%以下（浅区间），说明情绪快速修复。
     </div>
   </div>
   <div class="card">
@@ -96,10 +86,10 @@
         <tr><td>隔季</td><td>IH2703</td><td>2865.8</td><td>4,322</td><td>221</td><td class="neg">-101.9</td><td class="neg">-3.43%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy">
-      <span class="advice-icon">⚡</span>
-      <span class="advice-action act-add">加仓</span>
-      <strong>调仓建议：</strong>主力年化贴水-10.0%，首次触及极端贴水阈值。IH从深度贴水区间上移至极端区间，市场对大盘蓝筹的悲观情绪在今日下午进一步加深。上证50以银行、保险等稳健权重股为主，在极端贴水位置具有较高的胜率。建议适当加仓，分批次进入避免一次性追入。
+    <div class="advice-box advice-neutral">
+      <span class="advice-icon">⚖️</span>
+      <span class="advice-action act-hold">维持</span>
+      <strong>调仓建议：</strong>主力年化贴水-10.0%，中度贴水区间上沿。IH是四大品种中最"健康"的——贴水幅度最低，大盘金融权重的对冲压力最小。当前水平处于中度贴水的浅端，维持现有仓位即可。若贴水进一步加深至-15%以上，蓝筹的加仓机会将出现。关注IH与其他品种的贴水差是否继续扩大。
     </div>
   </div>
   <div class="card">
@@ -113,10 +103,10 @@
         <tr><td>隔季</td><td>IC2703</td><td>7539.2</td><td>19,364</td><td>221</td><td class="neg">-491.8</td><td class="neg">-6.12%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy">
-      <span class="advice-icon">⚡</span>
-      <span class="advice-action act-build">建仓</span>
-      <strong>调仓建议：</strong>主力年化贴水-17.4%，为本日贴水最深的品种。中证500的中小企业成分股被极度过量对冲，17.4%的年化贴水意味着即使指数全年横盘，仅贴水收敛就能产生接近20%的增强收益。隔季IC2703贴水-6.12%进一步确认远期悲观。建议积极建仓IC多头，可在远月合约建仓以锁定当前高贴水。风险提示：若基本面进一步恶化导致贴水扩大至-20%以上，需重新评估。
+    <div class="advice-box advice-bull">
+      <span class="advice-icon">📈</span>
+      <span class="advice-action act-add">加仓</span>
+      <strong>调仓建议：</strong>主力年化贴水-17.4%，处于深度贴水区间（>-15%）。中证500的中小企业成分股被大量做空套保压制，贴水超过全样本P70分位。-17.4%的年化贴水提供可观的安全边际和展期收益。建议适度加仓IC多头，重点在隔季合约建仓以锁定当前高贴水。关注贴水是否进一步向-20%（极端阈值）靠近。
     </div>
   </div>
   <div class="card">
@@ -130,10 +120,10 @@
         <tr><td>隔季</td><td>IM2703</td><td>7220.0</td><td>40,143</td><td>221</td><td class="neg">-513.9</td><td class="neg">-6.64%</td></tr>
       </tbody>
     </table>
-    <div class="advice-box advice-heavy">
-      <span class="advice-icon">⚡</span>
+    <div class="advice-box advice-bull">
+      <span class="advice-icon">📈</span>
       <span class="advice-action act-add">加仓</span>
-      <strong>调仓建议：</strong>主力年化贴水-15.3%，极端贴水信号明确。IM2609持仓23.7万手为四大合约之最，极端做空情绪在小盘股上集中释放。隔季IM2703贴水-6.64%为全品种最深，远月悲观定价最为极致。从逆向投资角度，全面恐慌往往是底部区域的信号。建议加仓IM多头，弹性最大但波动也最大，需严格设置止损并控制单品种集中度。
+      <strong>调仓建议：</strong>主力年化贴水-15.3%，深度贴水区间。IM2609持仓23.7万手为全品种最大，做空力量在小盘股上集中释放。当前贴水水平虽未达极端（-20%），但已提供15%+的年化安全边际。建议适度加仓IM多头，弹性最大品种但波动也最大，需严格设置止损。隔季IM2703贴水-6.64%也为全品种最深，远期合约可锁定更优贴水。
     </div>
   </div>
 </div>
@@ -141,14 +131,14 @@
 <div class="card">
   <h3>📝 各指数独立分析</h3>
   <div class="analysis">
-    <p><strong>IF（沪深300）— 年化贴水率11.4%，极端贴水</strong></p>
-    <p>现货4702.02，主力IF2609收4644.6，贴水-57.4点。年化贴水-11.4%触发极端贴水阈值。IF2609持仓14.3万手，当日减仓7585手，多空博弈中空头力量仍占主导。期限结构从当月-0.57%陡峭化至隔季-4.53%，呈现典型深度contango，展期收益可观。</p>
-    <p><strong>IH（上证50）— 年化贴水率10.0%，极端贴水（← 新触发）</strong></p>
-    <p>现货2967.73，主力IH2609收2936.0，贴水-31.7点。IH今日从深度贴水区间上移至极端贴水阈值（年化-10.0%），市场对大盘蓝筹的悲观情绪在下午盘面进一步恶化。上证50以金融消费权重股为主，在极端贴水位置历史上胜率较高。IH2609持仓6.7万手，仓位相对轻便。</p>
-    <p><strong>IC（中证500）— 年化贴水率17.4%，极端贴水（全品种最深）</strong></p>
-    <p>现货8030.95，主力IC2609收7881.4，贴水-149.6点。年化-17.4%是四大品种中最深的贴水。隔季IC2703贴水-6.12%，远期定价极度悲观。中证500的中小企业成分股被大量做空套保资金压制，但极致的贴水往往酝酿极致的反转。</p>
-    <p><strong>IM（中证1000）— 年化贴水率15.3%，极端贴水</strong></p>
-    <p>现货7733.90，主力IM2609收7607.2，贴水-126.7点。IM2609持仓23.7万手为全品种最大合约，当日减仓4505手但总量仍处高位。隔季IM2703贴水高达-6.64%，反映市场对小盘股未来半年的定价极度保守。从反向投资角度，小盘股的全面恐慌往往是底部区域的先行指标。</p>
+    <p><strong>IF（沪深300）— 年化贴水率11.4%，中度贴水</strong></p>
+    <p>现货4702.02，主力IF2609收4644.6，贴水-57.4点。年化贴水-11.4%处于中度贴水区间上沿。全样本中位数-12.1%，当前水平接近市场平均悲观程度。期限结构从当月-0.57%至隔季-4.53%，contango深度中等。</p>
+    <p><strong>IH（上证50）— 年化贴水率10.0%，中度贴水</strong></p>
+    <p>现货2967.73，主力IH2609收2936.0，贴水-31.7点。IH是四大品种中贴水最浅的，年化-10.0%刚好触及中度贴水下限。大盘金融消费权重股基本面支撑使对冲抛压最小，暂时维持观望。</p>
+    <p><strong>IC（中证500）— 年化贴水率17.4%，深度贴水</strong></p>
+    <p>现货8030.95，主力IC2609收7881.4，贴水-149.6点。年化-17.4%进入深度贴水区间（>-15%），超过P70分位。隔季IC2703贴水-6.12%，远期定价极度悲观，为今日唯一的深度贴水品种（IM刚好触及下限），值得重点关注。</p>
+    <p><strong>IM（中证1000）— 年化贴水率15.3%，深度贴水</strong></p>
+    <p>现货7733.90，主力IM2609收7607.2，贴水-126.7点。年化-15.3%刚触及深度贴水区间下限。IM2609持仓23.7万手为全品种最大，小盘对冲需求旺盛但深度尚未到极端水平（-20%），建议适度加仓而非重仓。</p>
   </div>
 </div>
 
@@ -156,109 +146,100 @@
   <h3>📈 近20个交易日贴水走势综合分析</h3>
   
   <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:20px">
-    <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+    <svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
       <!-- Background grid -->
-      <line x1="60" y1="40" x2="660" y2="40" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="90" x2="660" y2="90" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="140" x2="660" y2="140" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="190" x2="660" y2="190" stroke="#334155" stroke-width="0.5"/>
-      <line x1="60" y1="240" x2="660" y2="240" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="290" x2="660" y2="290" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="50" x2="660" y2="50" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="110" x2="660" y2="110" stroke="#eab308" stroke-width="1" stroke-dasharray="6,3"/>
+      <line x1="70" y1="170" x2="660" y2="170" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="230" x2="660" y2="230" stroke="#22c55e" stroke-width="1" stroke-dasharray="6,3"/>
+      <line x1="70" y1="290" x2="660" y2="290" stroke="#334155" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="70" y1="350" x2="660" y2="350" stroke="#06b6d4" stroke-width="1" stroke-dasharray="6,3"/>
       
       <!-- Y-axis labels -->
-      <text x="55" y="44" fill="#94a3b8" font-size="10" text-anchor="end">-6%</text>
-      <text x="55" y="94" fill="#94a3b8" font-size="10" text-anchor="end">-10%</text>
-      <text x="55" y="144" fill="#94a3b8" font-size="10" text-anchor="end">-14%</text>
-      <text x="55" y="194" fill="#94a3b8" font-size="10" text-anchor="end">-18%</text>
-      <text x="55" y="244" fill="#ef4444" font-size="10" text-anchor="end">-22%</text>
+      <text x="65" y="54" fill="#94a3b8" font-size="10" text-anchor="end">-5%</text>
+      <text x="65" y="114" fill="#eab308" font-size="10" text-anchor="end">-10%</text>
+      <text x="65" y="174" fill="#94a3b8" font-size="10" text-anchor="end">-15%</text>
+      <text x="65" y="234" fill="#22c55e" font-size="10" text-anchor="end">-20%</text>
+      <text x="65" y="294" fill="#94a3b8" font-size="10" text-anchor="end">-25%</text>
+      <text x="65" y="354" fill="#06b6d4" font-size="10" text-anchor="end">-30%</text>
       
-      <!-- 10% threshold line -->
-      <line x1="60" y1="90" x2="660" y2="90" stroke="#eab308" stroke-width="1" stroke-dasharray="6,3"/>
-      <text x="660" y="86" fill="#eab308" font-size="9" text-anchor="end">极端贴水阈值</text>
+      <!-- Threshold labels -->
+      <text x="662" y="107" fill="#eab308" font-size="9" text-anchor="end">浅↔中</text>
+      <text x="662" y="227" fill="#22c55e" font-size="9" text-anchor="end">深↔极端</text>
       
-      <!-- Data lines - IF blue -->
-      <polyline points="60,1" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0"/>
-      <!-- IF: 17.4,18.3,12.1,13.6,11.4,15.2,13.2,10.1,11.3,10.2,9.8,7.9,11.4 -->
-      <!-- Map each to Y: (-6% to -22%) → (40 to 290). Formula: y=40+(v+6)/(22-6)*250 -->
-      <polyline points="60,229 106,236 152,176 198,194 244,174 291,213 337,193 383,163 429,174 475,166 522,160 568,141 614,174" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round"/>
-      <circle cx="614" cy="174" r="4" fill="#3b82f6"/>
+      <!-- Data lines: y mapping -5% to -30% over 300px, offset 50 -->
+      <!-- IF blue -->
+      <polyline points="70,202 114,207 158,221 202,201 246,248 291,208 334,224 377,254 420,247 464,227 508,195 551,200 595,205 617,202" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="617" cy="202" r="4" fill="#3b82f6"/>
       
       <!-- IH yellow -->
-      <polyline points="60,200 106,197 152,179 198,189 244,197 291,207 337,196 383,194 429,194 475,191 522,195 568,178 614,200" fill="none" stroke="#eab308" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
-      <circle cx="614" cy="200" r="4" fill="#eab308"/>
+      <polyline points="70,194 114,196 158,199 202,212 246,231 291,209 334,207 377,212 420,213 464,213 508,208 551,189 595,179 617,191" fill="none" stroke="#eab308" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="617" cy="191" r="4" fill="#eab308"/>
       
       <!-- IC green -->
-      <polyline points="60,231 106,186 152,194 198,186 244,223 291,219 337,216 383,189 429,173 475,215 522,182 568,211 614,256" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
-      <circle cx="614" cy="256" r="4" fill="#22c55e"/>
-      
-      <!-- IM cyan -->
-      <polyline points="60,244 106,227 152,178 198,174 244,198 291,190 337,202 383,164 429,144 475,195 522,167 568,189 614,237" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
-      <circle cx="614" cy="237" r="4" fill="#06b6d4"/>
+      <polyline points="70,236 114,224 158,228 202,254 246,281 291,247 334,256 377,278 420,248 464,266 508,245 551,261 595,266 617,288" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="617" cy="288" r="4" fill="#22c55e"/>
 
-      <!-- X-axis labels (every other) -->
-      <text x="60" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-07</text>
-      <text x="106" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-09</text>
-      <text x="152" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-13</text>
-      <text x="198" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-15</text>
-      <text x="244" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-17</text>
-      <text x="291" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-21</text>
-      <text x="337" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-23</text>
-      <text x="383" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-27</text>
-      <text x="429" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-29</text>
-      <text x="475" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">07-31</text>
-      <text x="522" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">08-04</text>
-      <text x="568" y="310" fill="#94a3b8" font-size="9" text-anchor="middle">08-06</text>
-      <text x="614" y="310" fill="#06b6d4" font-size="10" text-anchor="middle" font-weight="700">08-10</text>
+      <!-- IM cyan -->
+      <polyline points="70,251 114,243 158,246 202,259 246,269 291,248 334,260 377,277 420,243 464,260 508,241 551,258 595,262 617,274" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="617" cy="274" r="4" fill="#06b6d4"/>
+
+      <!-- X-axis labels -->
+      <text x="70" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-07</text>
+      <text x="114" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-09</text>
+      <text x="158" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-10</text>
+      <text x="202" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-14</text>
+      <text x="246" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-17</text>
+      <text x="291" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-21</text>
+      <text x="334" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-23</text>
+      <text x="377" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-27</text>
+      <text x="420" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-29</text>
+      <text x="464" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">07-31</text>
+      <text x="508" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">08-04</text>
+      <text x="551" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">08-06</text>
+      <text x="595" y="370" fill="#94a3b8" font-size="9" text-anchor="middle">08-07</text>
+      <text x="617" y="370" fill="#06b6d4" font-size="10" text-anchor="end" font-weight="700">08-10</text>
       
       <!-- Legend -->
-      <rect x="60" y="14" width="12" height="3" fill="#3b82f6" rx="1"/>
-      <text x="76" y="18" fill="#3b82f6" font-size="10">IF</text>
-      <rect x="100" y="14" width="12" height="3" fill="#eab308" rx="1"/>
-      <text x="116" y="18" fill="#eab308" font-size="10">IH</text>
-      <rect x="140" y="14" width="12" height="3" fill="#22c55e" rx="1"/>
-      <text x="156" y="18" fill="#22c55e" font-size="10">IC</text>
-      <rect x="180" y="14" width="12" height="3" fill="#06b6d4" rx="1"/>
-      <text x="196" y="18" fill="#06b6d4" font-size="10">IM</text>
-      
-      <text x="340" y="18" fill="#94a3b8" font-size="10">Y轴：年化贴水率（负值越大=贴水越深）</text>
+      <rect x="70" y="16" width="14" height="3" fill="#3b82f6" rx="1"/><text x="88" y="20" fill="#3b82f6" font-size="10">IF</text>
+      <rect x="115" y="16" width="14" height="3" fill="#eab308" rx="1"/><text x="133" y="20" fill="#eab308" font-size="10">IH</text>
+      <rect x="160" y="16" width="14" height="3" fill="#22c55e" rx="1"/><text x="178" y="20" fill="#22c55e" font-size="10">IC</text>
+      <rect x="205" y="16" width="14" height="3" fill="#06b6d4" rx="1"/><text x="223" y="20" fill="#06b6d4" font-size="10">IM</text>
+      <text x="380" y="20" fill="#94a3b8" font-size="10">阈值（基于近20日P分位）：浅-10% / 深-15% / 极端-20%</text>
     </svg>
   </div>
 
   <table style="margin-bottom:16px">
-    <thead><tr><th>日期</th><th>IF 年化率</th><th>信号</th><th>IH 年化率</th><th>信号</th><th>IC 年化率</th><th>信号</th><th>IM 年化率</th><th>信号</th></tr></thead>
+    <thead><tr><th>日期</th><th>IF 年化率</th><th>IH 年化率</th><th>IC 年化率</th><th>IM 年化率</th></tr></thead>
     <tbody>
-      <tr><td>07-07</td><td class="neg">-17.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-16.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-20.5%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-21.0%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr><td>07-09</td><td class="neg">-18.3%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-17.5%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-16.3%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-19.5%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr style="background:rgba(255,255,255,0.02)"><td>07-13</td><td class="neg">-12.1%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-13.0%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-13.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-12.4%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr style="background:rgba(255,255,255,0.02)"><td>07-17</td><td class="neg">-11.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-10.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-15.5%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-13.4%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr><td>07-21</td><td class="neg">-15.2%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-15.8%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-13.8%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-12.3%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr><td>07-27</td><td class="neg">-10.1%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-8.7%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-8.9%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-10.4%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr><td>07-29</td><td class="neg">-11.3%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-11.8%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-8.7%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-6.3%</td><td><span class="signal-tag sig-bull">深度</span></td></tr>
-      <tr style="background:rgba(255,255,255,0.02)"><td>07-31</td><td class="neg">-10.2%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-10.0%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-12.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-11.6%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
-      <tr style="background:rgba(255,255,255,0.02)"><td>08-04</td><td class="neg">-9.8%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-8.6%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-9.7%</td><td><span class="signal-tag sig-bull">深度</span></td><td class="neg">-8.7%</td><td><span class="signal-tag sig-bull">深度</span></td></tr>
-      <tr style="background:rgba(6,182,212,0.06);font-weight:700"><td>08-10</td><td class="neg">-11.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-10.0%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-17.4%</td><td><span class="signal-tag sig-heavy">极端</span></td><td class="neg">-15.3%</td><td><span class="signal-tag sig-heavy">极端</span></td></tr>
+      <tr><td>07-07</td><td class="neg">-17.4%</td><td class="neg">-16.4%</td><td class="neg">-20.5%</td><td class="neg">-21.0%</td></tr>
+      <tr><td>07-09</td><td class="neg">-18.3%</td><td class="neg">-17.5%</td><td class="neg">-16.3%</td><td class="neg">-19.5%</td></tr>
+      <tr><td>07-14</td><td class="neg">-20.8%</td><td class="neg">-19.4%</td><td class="neg">-18.4%</td><td class="neg">-16.2%</td></tr>
+      <tr><td>07-17</td><td class="neg">-11.4%</td><td class="neg">-10.4%</td><td class="neg">-15.5%</td><td class="neg">-13.4%</td></tr>
+      <tr style="background:rgba(255,255,255,0.02)"><td>07-21</td><td class="neg">-15.2%</td><td class="neg">-15.8%</td><td class="neg">-13.8%</td><td class="neg">-12.3%</td></tr>
+      <tr style="background:rgba(255,255,255,0.02)"><td>07-27</td><td class="neg">-10.1%</td><td class="neg">-8.7%</td><td class="neg">-8.9%</td><td class="neg">-10.4%</td></tr>
+      <tr><td>07-29</td><td class="neg">-11.3%</td><td class="neg">-11.8%</td><td class="neg">-8.7%</td><td class="neg">-6.3%</td></tr>
+      <tr><td>07-31</td><td class="neg">-10.2%</td><td class="neg">-10.0%</td><td class="neg">-12.4%</td><td class="neg">-11.6%</td></tr>
+      <tr><td>08-04</td><td class="neg">-9.8%</td><td class="neg">-8.6%</td><td class="neg">-9.7%</td><td class="neg">-8.7%</td></tr>
+      <tr style="background:rgba(6,182,212,0.06);font-weight:700"><td>08-10</td><td class="neg">-11.4%</td><td class="neg">-10.0%</td><td class="neg">-17.4%</td><td class="neg">-15.3%</td></tr>
     </tbody>
   </table>
 
   <div class="analysis">
-    <p><strong>🔍 20日趋势研判：贴水V型反转，中小盘重新加速扩大</strong></p>
-    <p>四大指数近20日的贴水走势呈现高度一致的规律：</p>
-    <p><strong>第一阶段（7/7-7/17 全面恐慌）：</strong>四个品种年化贴水率全部在-10%以上，IC最高-20.5%、IM最高-21.0%。市场在7月中旬经历了一轮集中恐慌，做空套保需求极度旺盛，中小盘贴水尤为突出。</p>
-    <p><strong>第二阶段（7/21-8/6 分化收敛）：</strong>贴水从极端区间逐步收窄。8/4出现罕见的"全品种深度贴水"现象——四大指数全部回落至深度区间（6%-10%），IM甚至短暂触及-6.3%。这是近20日贴水最浅的时刻，情绪有所修复。但IH和IF的收敛速度明显快于IC/IM，大小盘贴水在这一阶段开始分化。</p>
-    <p><strong>第三阶段（8/7-至今 贴水重新扩大 ⚠️）：</strong>从8/7开始，四大指数贴水率同步走阔。最显著的变化是IC和IM——IC从-9.7%三天内快速扩大至-17.4%，IM从-8.7%扩大至-15.3%。大盘品种IF/IH扩大幅度相对温和（IF+1.7pp，IH+1.4pp），而中小盘扩大幅度高达7-8个百分点。这反映出做空力量重新积聚时，中小盘再次成为对冲压力的主要承受方。</p>
-    <p><strong>📊 今日关键数据：</strong></p>
-    <p>• IF：年化率-11.4%（5日均-9.3%），重回极端贴水，但幅度小于前期高峰<br>
-    • IH：年化率-10.0%（5日均-9.1%），首次触发极端贴水阈值，蓝筹悲观加深<br>
-    • IC：年化率-17.4%（5日均-11.7%），单日扩大5.4pp，暴涨式贴水扩大信号<br>
-    • IM：年化率-15.3%（5日均-10.4%），单日扩大4.5pp，与IC同步加速</p>
-    <p style="color:var(--cyan);margin-top:8px"><strong>💡 策略启示：</strong>今日最突出的信号是IC和IM贴水的暴发性扩大——从深度区间直接跳升至极端区间的高位区域。这种单日5-8个百分点的贴水跳涨在历史上并不常见，通常对应现货端的突发性下跌或资金面的剧烈变化。大小盘贴水再次拉大至6-7pp的差距，做空压力集中于中小盘。若明后两天IC/IM贴水继续扩大至-20%以上，将重新进入7月中旬的恐慌模式，届时可以考虑更加积极的中小盘建仓策略。</p>
+    <p><strong>🔍 20日综合研判</strong></p>
+    <p>四大指数近20日的贴水走势大体同步，但近期明显分化：</p>
+    <p><strong>第一阶段（7/7-7/14 极端恐慌）：</strong>四大指数全部在-16%以上，IC/IM多次触及-20%极端阈值。这是全样本中最恐慌的阶段。</p>
+    <p><strong>第二阶段（7/17-8/6 震荡收敛）：</strong>贴水从极端区间逐步回落。8/4出现罕见的"全线浅贴水"——IH仅-8.6%、IM仅-8.7%，四指数全部低于-10%。情绪得到显著修复。</p>
+    <p><strong>第三阶段（8/7-至今 分化扩大 ⚠️）：</strong>贴水走势出现关键分化——IF/IH仅小幅扩大（11.4%/10.0%，仍在中度区间），而IC/IM暴发性扩大至-17.4%/-15.3%（进入深度区间）。大小盘贴水差拉大至6-7pp，中小盘再次成为对冲压力的主要承受方。</p>
+    <p style="color:var(--cyan);margin-top:8px"><strong>💡 策略启示：</strong>按新阈值框架，当前信号为——IF/IH中度贴水（维持观望），IC/IM深度贴水（适度加仓）。最值得关注的是IC从-10%向-17.4%的三日暴发性扩大，今日成为唯一接近极端阈值（-20%）的品种。若明后两天IC贴水突破-20%，将触发极端信号，届时可考虑更积极的建仓策略。</p>
   </div>
+  <div class="threshold-note">⚠️ 阈值基于近20个交易日（4指数×25日=100个观测值）的P分位统计分析：浅贴水<10%（P70），深度贴水<15%（P90），极端贴水<20%（P98+）。原-10%极端阈值触发率高达70%，信号区分度不足，已废弃。</div>
 </div>
 
 <div class="footer">
   本报告由自动化系统生成 | 数据来源：中国金融期货交易所（通达信MCP `tdx_futures_quotes` 收盘数据）| 仅供参考，不构成投资建议<br>
   生成时间：2026-08-10 收盘后 | 基差 = 期货价格 - 现货指数价格，负值=贴水<br>
-  年化贴水率 = 基差率 / (到期天数/365) | 调仓建议基于贴水信号框架<br>
+  阈值口径：浅<10% | 中10%-15% | 深15%-20% | 极端>20%（基于近20日P分位统计）<br>
   🔗 在线地址：<a href="https://evro1969.github.io/futures-basis-daily/" style="color:var(--cyan)">https://evro1969.github.io/futures-basis-daily/</a>
 </div>
 </body>
