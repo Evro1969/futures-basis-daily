@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股指期货贴水日报 - 2026-08-10</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: #334155;
+    --red: #ef4444;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --yellow: #eab308;
+    --cyan: #06b6d4;
+    --orange: #f97316;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
+  
+  .hero {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .hero-position {
+    font-size: 72px;
+    font-weight: 800;
+    color: #ef4444;
+    margin: 16px 0;
+  }
+  .hero-label {
+    font-size: 18px;
+    color: #ef4444;
+    font-weight: 600;
+  }
+  .hero-range {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: left;
+    background: rgba(255,255,255,0.02);
+  }
+  th:first-child, td:first-child { text-align: left; }
+  
+  .neg { color: var(--green); }
+  .pos { color: var(--red); }
+  .highlight { font-weight: 700; }
+  
+  .signal-box {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ef444422;
+    color: #ef4444;
+    border: 1px solid #ef444444;
+  }
+  
+  .divider {
+    height: 24px;
+    border-left: 2px solid var(--border);
+  }
+  
+  .footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--yellow), var(--green));
+    border-radius: 4px;
+  }
+  
+  .analysis-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text);
+  }
+  .analysis-text strong { color: #ef4444; }
+</style>
+</head>
+<body>
+
+<h1>📊 股指期货贴水日报</h1>
+<div class="subtitle">2026-08-10 | 收盘后生成 | 数据来源：中国金融期货交易所（通达信）</div>
+
+<!-- 核心结论 -->
+<div class="hero">
+  <div class="hero-label"><span class="signal-box">防御</span></div>
+  <div class="hero-position">37.4%</div>
+  <div style="font-size: 16px; margin-top: 8px;">建议投资仓位</div>
+  <div class="hero-range">合理区间: 20%-40% | 加权年化贴水率: -13.6%</div>
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: 37.4%"></div>
+  </div>
+</div>
+
+<!-- 四指数贴水汇总表 -->
+<div class="card" style="margin-bottom: 24px;">
+  <h3>📋 四大股指期货基差总览</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>品种</th>
+        <th>现货指数</th>
+        <th>当月合约</th>
+        <th>基差率</th>
+        <th>主力合约</th>
+        <th>基差率</th>
+        <th>年化贴水率</th>
+        <th>当季合约</th>
+        <th>基差率</th>
+        <th>隔季合约</th>
+        <th>基差率</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>IF</strong><br><span style="font-size:11px;color:var(--text-secondary)">沪深300</span></td>
+        <td class="highlight">4702.02</td>
+        <td>IF2608<br><span style="font-size:11px">4675.2</span></td>
+        <td><span class="neg">-0.57%</span></td>
+        <td class="highlight">IF2609<br><span style="font-size:11px">4644.6</span></td>
+        <td><span class="neg">-1.22%</span></td>
+        <td class="highlight"><span class="neg">-11.43%</span></td>
+        <td>IF2609<br><span style="font-size:11px">4644.6</span></td>
+        <td><span class="neg">-1.22%</span></td>
+        <td>IF2612<br><span style="font-size:11px">4565.2</span></td>
+        <td><span class="neg">-2.91%</span></td>
+      </tr>
+      <tr>
+        <td><strong>IH</strong><br><span style="font-size:11px;color:var(--text-secondary)">上证50</span></td>
+        <td class="highlight">2967.73</td>
+        <td>IH2608<br><span style="font-size:11px">2956.0</span></td>
+        <td><span class="neg">-0.40%</span></td>
+        <td class="highlight">IH2609<br><span style="font-size:11px">2936.0</span></td>
+        <td><span class="neg">-1.07%</span></td>
+        <td class="highlight"><span class="neg">-10.01%</span></td>
+        <td>IH2609<br><span style="font-size:11px">2936.0</span></td>
+        <td><span class="neg">-1.07%</span></td>
+        <td>IH2612<br><span style="font-size:11px">2893.2</span></td>
+        <td><span class="neg">-2.51%</span></td>
+      </tr>
+      <tr>
+        <td><strong>IC</strong><br><span style="font-size:11px;color:var(--text-secondary)">中证500</span></td>
+        <td class="highlight">8030.95</td>
+        <td>IC2608<br><span style="font-size:11px">7955.2</span></td>
+        <td><span class="neg">-0.94%</span></td>
+        <td class="highlight">IC2609<br><span style="font-size:11px">7881.4</span></td>
+        <td><span class="neg">-1.86%</span></td>
+        <td class="highlight"><span class="neg">-17.43%</span></td>
+        <td>IC2609<br><span style="font-size:11px">7881.4</span></td>
+        <td><span class="neg">-1.86%</span></td>
+        <td>IC2612<br><span style="font-size:11px">7707.6</span></td>
+        <td><span class="neg">-4.03%</span></td>
+      </tr>
+      <tr>
+        <td><strong>IM</strong><br><span style="font-size:11px;color:var(--text-secondary)">中证1000</span></td>
+        <td class="highlight">7733.90</td>
+        <td>IM2608<br><span style="font-size:11px">7682.8</span></td>
+        <td><span class="neg">-0.66%</span></td>
+        <td class="highlight">IM2609<br><span style="font-size:11px">7607.2</span></td>
+        <td><span class="neg">-1.64%</span></td>
+        <td class="highlight"><span class="neg">-15.33%</span></td>
+        <td>IM2609<br><span style="font-size:11px">7607.2</span></td>
+        <td><span class="neg">-1.64%</span></td>
+        <td>IM2612<br><span style="font-size:11px">7413.2</span></td>
+        <td><span class="neg">-4.15%</span></td>
+      </tr>
+      <tr style="background: rgba(255,255,255,0.03); font-weight: 700;">
+        <td colspan="5">加权综合（IF:30% IH:20% IC:25% IM:25%）</td>
+        <td colspan="2" style="text-align: center;"><span class="neg">-13.62%</span></td>
+        <td colspan="4" style="text-align: center;">
+          <span class="signal-box">防御</span>
+          建议仓位 37.4%
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 各指数详细分析 -->
+<div class="grid-2">
+  <div class="card">
+    <h3>IF 沪深300 — 期限结构</h3>
+    <table>
+      <thead>
+        <tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期天数</th><th>基差</th><th>基差率</th><th>年化率</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>当月</strong></td>
+          <td>IF2608</td>
+          <td>4675.2</td>
+          <td>36,037</td>
+          <td>11天</td>
+          <td class="neg">-26.8</td>
+          <td class="neg">-0.57%</td>
+          <td class="neg highlight">-18.9%</td>
+        </tr>
+        <tr>
+          <td><strong>主力 ⭐</strong></td>
+          <td>IF2609</td>
+          <td>4644.6</td>
+          <td>143,433</td>
+          <td>39天</td>
+          <td class="neg">-57.4</td>
+          <td class="neg">-1.22%</td>
+          <td class="neg highlight">-11.4%</td>
+        </tr>
+        <tr>
+          <td><strong>次主力</strong></td>
+          <td>IF2612</td>
+          <td>4565.2</td>
+          <td>61,714</td>
+          <td>130天</td>
+          <td class="neg">-136.8</td>
+          <td class="neg">-2.91%</td>
+          <td class="neg highlight">-8.2%</td>
+        </tr>
+        <tr>
+          <td><strong>当季</strong></td>
+          <td>IF2609</td>
+          <td>4644.6</td>
+          <td>143,433</td>
+          <td>39天</td>
+          <td class="neg">-57.4</td>
+          <td class="neg">-1.22%</td>
+          <td class="neg highlight">-11.4%</td>
+        </tr>
+        <tr>
+          <td><strong>隔季</strong></td>
+          <td>IF2612</td>
+          <td>4565.2</td>
+          <td>61,714</td>
+          <td>130天</td>
+          <td class="neg">-136.8</td>
+          <td class="neg">-2.91%</td>
+          <td class="neg highlight">-8.2%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3>IH 上证50 — 期限结构</h3>
+    <table>
+      <thead>
+        <tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期天数</th><th>基差</th><th>基差率</th><th>年化率</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>当月</strong></td>
+          <td>IH2608</td>
+          <td>2956.0</td>
+          <td>20,366</td>
+          <td>11天</td>
+          <td class="neg">-11.7</td>
+          <td class="neg">-0.40%</td>
+          <td class="neg highlight">-13.1%</td>
+        </tr>
+        <tr>
+          <td><strong>主力 ⭐</strong></td>
+          <td>IH2609</td>
+          <td>2936.0</td>
+          <td>67,352</td>
+          <td>39天</td>
+          <td class="neg">-31.7</td>
+          <td class="neg">-1.07%</td>
+          <td class="neg highlight">-10.0%</td>
+        </tr>
+        <tr>
+          <td><strong>次主力</strong></td>
+          <td>IH2612</td>
+          <td>2893.2</td>
+          <td>25,354</td>
+          <td>130天</td>
+          <td class="neg">-74.5</td>
+          <td class="neg">-2.51%</td>
+          <td class="neg highlight">-7.0%</td>
+        </tr>
+        <tr>
+          <td><strong>当季</strong></td>
+          <td>IH2609</td>
+          <td>2936.0</td>
+          <td>67,352</td>
+          <td>39天</td>
+          <td class="neg">-31.7</td>
+          <td class="neg">-1.07%</td>
+          <td class="neg highlight">-10.0%</td>
+        </tr>
+        <tr>
+          <td><strong>隔季</strong></td>
+          <td>IH2612</td>
+          <td>2893.2</td>
+          <td>25,354</td>
+          <td>130天</td>
+          <td class="neg">-74.5</td>
+          <td class="neg">-2.51%</td>
+          <td class="neg highlight">-7.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3>IC 中证500 — 期限结构</h3>
+    <table>
+      <thead>
+        <tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期天数</th><th>基差</th><th>基差率</th><th>年化率</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>当月</strong></td>
+          <td>IC2608</td>
+          <td>7955.2</td>
+          <td>43,420</td>
+          <td>11天</td>
+          <td class="neg">-75.8</td>
+          <td class="neg">-0.94%</td>
+          <td class="neg highlight">-31.3%</td>
+        </tr>
+        <tr>
+          <td><strong>主力 ⭐</strong></td>
+          <td>IC2609</td>
+          <td>7881.4</td>
+          <td>163,714</td>
+          <td>39天</td>
+          <td class="neg">-149.6</td>
+          <td class="neg">-1.86%</td>
+          <td class="neg highlight">-17.4%</td>
+        </tr>
+        <tr>
+          <td><strong>次主力</strong></td>
+          <td>IC2612</td>
+          <td>7707.6</td>
+          <td>76,917</td>
+          <td>130天</td>
+          <td class="neg">-323.4</td>
+          <td class="neg">-4.03%</td>
+          <td class="neg highlight">-11.3%</td>
+        </tr>
+        <tr>
+          <td><strong>当季</strong></td>
+          <td>IC2609</td>
+          <td>7881.4</td>
+          <td>163,714</td>
+          <td>39天</td>
+          <td class="neg">-149.6</td>
+          <td class="neg">-1.86%</td>
+          <td class="neg highlight">-17.4%</td>
+        </tr>
+        <tr>
+          <td><strong>隔季</strong></td>
+          <td>IC2612</td>
+          <td>7707.6</td>
+          <td>76,917</td>
+          <td>130天</td>
+          <td class="neg">-323.4</td>
+          <td class="neg">-4.03%</td>
+          <td class="neg highlight">-11.3%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3>IM 中证1000 — 期限结构</h3>
+    <table>
+      <thead>
+        <tr><th>合约</th><th>代码</th><th>价格</th><th>持仓量</th><th>到期天数</th><th>基差</th><th>基差率</th><th>年化率</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>当月</strong></td>
+          <td>IM2608</td>
+          <td>7682.8</td>
+          <td>73,842</td>
+          <td>11天</td>
+          <td class="neg">-51.1</td>
+          <td class="neg">-0.66%</td>
+          <td class="neg highlight">-21.9%</td>
+        </tr>
+        <tr>
+          <td><strong>主力 ⭐</strong></td>
+          <td>IM2609</td>
+          <td>7607.2</td>
+          <td>236,892</td>
+          <td>39天</td>
+          <td class="neg">-126.7</td>
+          <td class="neg">-1.64%</td>
+          <td class="neg highlight">-15.3%</td>
+        </tr>
+        <tr>
+          <td><strong>次主力</strong></td>
+          <td>IM2612</td>
+          <td>7413.2</td>
+          <td>117,067</td>
+          <td>130天</td>
+          <td class="neg">-320.7</td>
+          <td class="neg">-4.15%</td>
+          <td class="neg highlight">-11.6%</td>
+        </tr>
+        <tr>
+          <td><strong>当季</strong></td>
+          <td>IM2609</td>
+          <td>7607.2</td>
+          <td>236,892</td>
+          <td>39天</td>
+          <td class="neg">-126.7</td>
+          <td class="neg">-1.64%</td>
+          <td class="neg highlight">-15.3%</td>
+        </tr>
+        <tr>
+          <td><strong>隔季</strong></td>
+          <td>IM2612</td>
+          <td>7413.2</td>
+          <td>117,067</td>
+          <td>130天</td>
+          <td class="neg">-320.7</td>
+          <td class="neg">-4.15%</td>
+          <td class="neg highlight">-11.6%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 综合分析 -->
+<div class="card" style="margin-bottom: 24px;">
+  <h3>📝 市场位置解读</h3>
+  <div class="analysis-text">
+    <p>当前加权年化贴水率为 <strong>-13.6%</strong>（升水状态）。期货价格高于现货，表明市场情绪较为乐观。需要注意乐观情绪可能已经充分定价，历史数据显示升水阶段后续回撤概率较高，建议防御性降低仓位。</p>
+<p><strong>仓位建议逻辑：</strong>防御信号触发，建议仓位 <strong>37.4%</strong>（区间 20%-40%）。
+当前贴水不足以为多头提供足够的安全边际。建议等待更好的入场时机，或通过精选个股而非指数配置来获取超额收益。</p>
+  </div>
+</div>
+
+<div class="footer">
+  本报告由自动化系统生成 | 数据来源：中国金融期货交易所（通过通达信MCP） | 仅供参考，不构成投资建议<br>
+  生成时间：2026-08-10 | 贴水=期货价低于现货价，贴水越深表示市场情绪越悲观（也可能是机会）
+</div>
+
+</body>
+</html>
