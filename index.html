@@ -250,6 +250,115 @@
   </table>
 </div>
 
+<!-- 近30日年化贴水率走势 -->
+<div class="trend-card" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+  <h2 style="font-size: 20px; margin-bottom: 6px;">📈 近30个交易日主力合约年化贴水率走势</h2>
+  <div style="color: var(--text-secondary); font-size: 13px; margin-bottom: 18px;">主力连续合约相对现货的年化贴水率（负值 = 贴水）｜数据来源：中国金融期货交易所（通达信）</div>
+  <div style="position: relative; height: 360px;">
+    <canvas id="trendChart"></canvas>
+  </div>
+  <div style="margin-top: 16px; font-size: 13.5px; line-height: 1.8; color: var(--text); background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 14px;">
+    <strong style="color:#93c5fd;">走势解读：</strong>近30个交易日四大股指贴水率整体呈「先收敛、后急剧加深」形态。<strong>8月10日前</strong>贴水维持在 -5%~-12% 的相对温和区间；<strong>8月10日后快速走阔</strong>，中小盘品种加深尤为剧烈——IC 自 -11% 一路扩至 <strong style="color:#f97316;">-22.3%</strong>、IM 自 -10% 扩至 <strong style="color:#eab308;">-20.6%</strong>，双双创出近30日最深；大盘品种 IF/IH 也同步走阔至 <strong style="color:#3b82f6;">-13.9%</strong> 与 <strong style="color:#22c55e;">-11.7%</strong>。贴水快速走阔反映期货端空头对冲需求激增、市场风险偏好急剧收缩；但历史经验表明，极端贴水往往对应阶段性情绪底部，是中长期多头布局、博取贴水收敛收益的黄金窗口。
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  const canvas = document.getElementById('trendChart');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["07-06", "07-07", "07-08", "07-09", "07-10", "07-13", "07-14", "07-15", "07-16", "07-17", "07-20", "07-21", "07-22", "07-23", "07-24", "07-27", "07-28", "07-29", "07-30", "07-31", "08-03", "08-04", "08-05", "08-06", "08-07", "08-10", "08-11", "08-12", "08-13", "08-14", "08-17", "08-18"],
+      datasets: [
+{
+        label: 'IF 沪深300',
+        data: [-9.05, -9.27, -9.33, -10.07, -8.31, -7.05, -12.28, -8.14, -6.41, -7.07, -6.95, -10.03, -9.24, -9.02, -9.95, -7.41, -7.45, -8.63, -6.66, -8.15, -5.41, -8.48, -6.62, -7.17, -9.04, -11.43, -7.99, -10.5, -8.68, -10.17, -10.13, -13.86],
+        borderColor: '#3b82f6',
+        backgroundColor: '#3b82f622',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHitRadius: 8,
+        pointHoverRadius: 4,
+        tension: 0.25,
+        fill: false,
+    },
+{
+        label: 'IH 上证50',
+        data: [-8.8, -8.78, -9.17, -9.61, -8.0, -7.59, -12.04, -10.04, -7.13, -6.41, -8.11, -10.45, -9.44, -6.44, -10.22, -6.4, -8.02, -8.98, -10.15, -7.94, -7.43, -7.4, -8.7, -6.67, -8.93, -10.01, -6.86, -9.53, -8.84, -9.34, -10.15, -11.65],
+        borderColor: '#22c55e',
+        backgroundColor: '#22c55e22',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHitRadius: 8,
+        pointHoverRadius: 4,
+        tension: 0.25,
+        fill: false,
+    },
+{
+        label: 'IC 中证500',
+        data: [-10.5, -10.94, -8.15, -8.94, -10.48, -7.8, -10.62, -6.97, -6.17, -9.62, -8.96, -9.11, -11.42, -10.9, -10.1, -6.57, -8.58, -6.69, -6.39, -9.84, -6.26, -8.37, -6.88, -10.77, -11.14, -17.43, -11.52, -16.08, -13.0, -16.85, -14.3, -22.26],
+        borderColor: '#f97316',
+        backgroundColor: '#f9731622',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHitRadius: 8,
+        pointHoverRadius: 4,
+        tension: 0.25,
+        fill: false,
+    },
+{
+        label: 'IM 中证1000',
+        data: [-12.09, -11.24, -8.98, -10.7, -11.38, -7.24, -9.57, -6.8, -5.92, -8.31, -10.09, -8.13, -11.42, -11.03, -10.76, -7.62, -8.3, -4.84, -5.87, -9.23, -6.32, -7.55, -6.56, -8.86, -10.06, -15.33, -10.59, -14.72, -10.73, -16.06, -13.37, -20.59],
+        borderColor: '#eab308',
+        backgroundColor: '#eab30822',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHitRadius: 8,
+        pointHoverRadius: 4,
+        tension: 0.25,
+        fill: false,
+    }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#e2e8f0', font: { size: 12 }, usePointStyle: true, boxWidth: 8 },
+        },
+        tooltip: {
+          backgroundColor: '#1e293b',
+          borderColor: '#334155',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#e2e8f0',
+          callbacks: {
+            label: function(c) { return c.dataset.label + ': ' + c.parsed.y.toFixed(2) + '%'; },
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: '#94a3b8', font: { size: 10 }, maxTicksLimit: 16 },
+          grid: { color: 'rgba(255,255,255,0.05)' },
+        },
+        y: {
+          ticks: { color: '#94a3b8', font: { size: 11 }, callback: function(v) { return v + '%'; } },
+          grid: { color: 'rgba(255,255,255,0.08)' },
+          title: { display: true, text: '年化贴水率 (%)', color: '#94a3b8', font: { size: 11 } },
+        },
+      },
+    },
+  });
+})();
+</script>
+
+
 <!-- 期限结构卡片 (2x2 grid) -->
 <div class="grid-2">
   <!-- IF 沪深300 -->
