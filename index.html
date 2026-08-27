@@ -52,32 +52,13 @@ th:first-child,td:first-child{text-align:left}
 <div class="ci"><div class="lb">IC 中证500 · 红牌区</div><div class="ov">昨 -12.6%</div><div class="nw" style="color:#ef4444">-10.9%</div><div class="chg chg-u">↗ +1.7pp 较昨</div><div class="ov" style="margin-top:8px">期权IV 28.3%（500ETF）</div><div class="chg chg-u" style="font-size:12px">↘ -1.4pp 较昨（29.7%）</div></div>
 <div class="ci"><div class="lb">IM 中证1000 · 黄牌区</div><div class="ov">昨 -11.1%</div><div class="nw" style="color:#eab308">-9.8%</div><div class="chg chg-u">↗ +1.3pp 较昨</div><div class="ov" style="margin-top:8px">期权IV 22.9%（中证1000期权）</div><div class="chg chg-u" style="font-size:12px">↘ -0.8pp 较昨（23.7%）</div></div>
 </div>
-<div class="card"><h3>🏛 资产配置建议（整体权益仓位 × 风格结构）</h3>
-<div class="alloc-grid">
-<div class="alloc-box">
-<div class="al-lb">整体权益仓位（占可投资资产）</div>
-<div class="al-zone"><span class="zone zone-r">红牌区</span></div>
-<div class="al-num" style="color:#ef4444">20%-40%</div>
-<div class="al-ov">整体年化贴水 -9.0%</div>
-</div>
-<div class="alloc-box">
-<div class="al-lb">风格结构（占整体权益，按各指数牌区低配/标配/超配）</div>
-<table><thead><tr><th>风格</th><th>权重</th><th>方向</th></tr></thead><tbody>
-<tr><td>大盘（沪深300+上证50）</td><td class="hi">46%</td><td>IF红/IH红 · 低配</td></tr><tr><td>中盘（中证500）</td><td class="hi">22%</td><td>IC红 · 低配</td></tr><tr><td>小盘（中证1000）</td><td class="hi">33%</td><td>IM黄 · 标配</td></tr></tbody></table>
-</div>
-</div>
-<div class="al-op">整体亮红牌 → 整体权益仓位建议控制在 20%-40%（占可投资资产）：逢反弹分批减仓、暂停加仓，保留现金等待整体转黄；红牌对应风格板块低配。</div></div>
-<div class="card"><h3>🎯 IV×估值信号（期权隐含波动率 × 估值分位）</h3>
-<table><thead><tr><th>指数</th><th>平值IV</th><th>IV状态</th><th>3年PE分位</th><th>估值</th><th>信号</th></tr></thead>
-<tbody><tr><td>IF 沪深300</td><td class="hi">19.6%</td><td style="color:#94a3b8">中性→</td><td>70%</td><td>高</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IH 上证50</td><td class="hi">16.3%</td><td style="color:#94a3b8">中性→</td><td>64%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IC 中证500</td><td class="hi">28.3%</td><td style="color:#ef4444">放大↗</td><td>75%</td><td>高</td><td style="color:#eab308;font-weight:500">谨慎↓</td></tr><tr><td>IM 中证1000</td><td class="hi">22.9%</td><td style="color:#94a3b8">中性→</td><td>67%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr></tbody></table>
-<div class="al-op">IV 放大＋估值低 → 加仓信号（恐惧＋便宜）；IV 缩小＋估值高 → 变盘警惕（乐观＋贵）；信号对风格权重做 ±10% 以内微调，整体仓位区间不受影响。IV 历史样本不足 60 日期间按绝对阈值过渡。</div></div>
-<div class="card"><h3>⚖️ 当下调仓建议（基差 × IV × 环比变化）</h3>
+<div class="card"><h3>🏛 资产配置与调仓建议（整体权益 × 风格调仓）</h3>
 <div class="alloc-grid">
 <div class="alloc-box">
 <div class="al-lb">仓位建议（占可投资资产）</div>
 <div class="al-zone"><span class="zone act-hold">维持</span></div>
-<div class="al-num">20%-40%</div>
-<div class="al-ov">IV与估值信号中性，按牌区基准区间执行，不追涨不杀跌（基差红牌区 + IV信号分-0.5）</div>
+<div class="al-num" style="color:#ef4444">20%-40%</div>
+<div class="al-ov">整体年化贴水 -9.0%（基差红牌区 + IV信号分-0.5）</div>
 </div>
 <div class="alloc-box">
 <div class="al-lb">操作建议（当前位置）</div>
@@ -94,6 +75,10 @@ th:first-child,td:first-child{text-align:left}
 </div>
 </div>
 <div class="al-op">整体亮红牌 → 整体权益仓位建议控制在 20%-40%（占可投资资产）：逢反弹分批减仓、暂停加仓，保留现金等待整体转黄；红牌对应风格板块低配。 环比因子（贴水/IV vs 近5日均值）仅对操作档位做 ±1 档微调，不改变仓位区间；纪律优先，等待牌区转黄或加仓信号确认后再回补。</div></div>
+<div class="card"><h3>🎯 IV×估值信号（期权隐含波动率 × 估值分位）</h3>
+<table><thead><tr><th>指数</th><th>平值IV</th><th>IV状态</th><th>3年PE分位</th><th>估值</th><th>信号</th></tr></thead>
+<tbody><tr><td>IF 沪深300</td><td class="hi">19.6%</td><td style="color:#94a3b8">中性→</td><td>70%</td><td>高</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IH 上证50</td><td class="hi">16.3%</td><td style="color:#94a3b8">中性→</td><td>64%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IC 中证500</td><td class="hi">28.3%</td><td style="color:#ef4444">放大↗</td><td>75%</td><td>高</td><td style="color:#eab308;font-weight:500">谨慎↓</td></tr><tr><td>IM 中证1000</td><td class="hi">22.9%</td><td style="color:#94a3b8">中性→</td><td>67%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr></tbody></table>
+<div class="al-op">IV 放大＋估值低 → 加仓信号（恐惧＋便宜）；IV 缩小＋估值高 → 变盘警惕（乐观＋贵）；信号对风格权重做 ±10% 以内微调，整体仓位区间不受影响。IV 历史样本不足 60 日期间按绝对阈值过渡。</div></div>
 <div class="g2">
 <div class="card"><h3>IF 沪深300 — 期限结构 <span style="color:var(--ts);font-weight:400;font-size:14px">现货 4606.75</span></h3>
 <table><thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓</th><th>到期</th><th>基差</th><th>基差率</th></tr></thead><tbody>
