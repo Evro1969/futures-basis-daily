@@ -45,7 +45,7 @@ th:first-child,td:first-child{text-align:left}
 .al-ov{font-size:12px;color:var(--ts);margin-top:6px}
 .al-op{margin-top:14px;padding:12px 14px;border-radius:8px;background:rgba(59,130,246,.08);border-left:3px solid var(--c);font-size:14px;line-height:1.7}</style></head><body>
 <h1>📊 股指基差×IV双信号日报</h1>
-<div class="sub">2026-09-03（周四）| 收盘后 | 数据源：中金所·期权（通达信）| ⚠️ 收盘：现货全线小幅反弹（+0.1%~+0.3%），但期货贴水仍深——IF/IH/IC 亮红牌、IM 维持黄牌（年化-13.03%，红线-14.96%上方缓冲1.9pp）→ 整体 3红1黄 判红牌（年化-11.7%，较近5日均值-10.7%基本持平、微幅恶化-1.0pp、方向中性）。仓位建议 20%-40%，操作建议减仓/轻仓；风格大盘/中盘低配、小盘标配（45.2/22.6/32.3）。期权估值源（mx-ds）今日不可用，IV×估值信号均判中性。</div>
+<div class="sub">2026-09-03（周四）| 收盘后 | 数据源：中金所·期权（通达信）| ⚠️ 收盘：现货全线小幅反弹（+0.1%~+0.3%），但期货跟涨乏力、贴水仍深——IF/IH/IC 亮红牌、IM 维持黄牌（年化-13.03%，红线-14.96%上方缓冲1.9pp）→ 整体 3红1黄 判红牌（年化-11.7%，较近5日均值-10.7%基本持平、方向中性）。仓位建议 20%-40%，操作建议减仓/轻仓；风格大盘/中盘低配、小盘标配（45.7/21.7/32.6）。期权端今日平值IV明显回落（IF 14.9%/IC 23.2%），IC 因判定IV仍处高位×估值高 保留谨慎信号（IV信号分-0.5未改变仓位区间）。</div>
 <div class="cmp">
 <div class="ci"><div class="lb">IF 沪深300 · 红牌区</div><div class="ov">昨 -7.9%</div><div class="nw" style="color:#ef4444">-8.4%</div><div class="chg chg-d">↘ -0.5pp 较昨</div><div class="ov" style="margin-top:8px">期权IV 18.2%（300ETF）</div><div class="chg chg-u" style="font-size:12px">↘ -0.7pp 较昨（18.9%）</div></div>
 <div class="ci"><div class="lb">IH 上证50 · 红牌区</div><div class="ov">昨 -12.2%</div><div class="nw" style="color:#ef4444">-9.9%</div><div class="chg chg-u">↗ +2.3pp 较昨</div><div class="ov" style="margin-top:8px">期权IV 15.6%（50ETF）</div><div class="chg chg-u" style="font-size:12px">↘ -0.4pp 较昨（15.9%）</div></div>
@@ -58,7 +58,7 @@ th:first-child,td:first-child{text-align:left}
 <div class="al-lb">仓位建议（占可投资资产）</div>
 <div class="al-zone"><span class="zone act-hold">维持</span></div>
 <div class="al-num" style="color:#ef4444">20%-40%</div>
-<div class="al-ov">整体年化贴水 -11.7%（基差红牌区 + IV信号分+0.0）</div>
+<div class="al-ov">整体年化贴水 -11.7%（基差红牌区 + IV信号分-0.5）</div>
 </div>
 <div class="alloc-box">
 <div class="al-lb">操作建议（当前位置）</div>
@@ -71,13 +71,13 @@ th:first-child,td:first-child{text-align:left}
 <div class="alloc-box">
 <div class="al-lb">风格调仓（占整体权益，牌区方向 × IV信号）</div>
 <table><thead><tr><th>风格</th><th>权重</th><th>牌区方向</th><th>IV信号</th></tr></thead><tbody>
-<tr><td>大盘（沪深300+上证50）</td><td class="hi">45%</td><td>IF红/IH红 · 低配</td><td>中性/中性</td></tr><tr><td>中盘（中证500）</td><td class="hi">23%</td><td>IC红 · 低配</td><td>中性</td></tr><tr><td>小盘（中证1000）</td><td class="hi">32%</td><td>IM黄 · 标配</td><td>中性</td></tr></tbody></table>
+<tr><td>大盘（沪深300+上证50）</td><td class="hi">46%</td><td>IF红/IH红 · 低配</td><td>中性/中性</td></tr><tr><td>中盘（中证500）</td><td class="hi">22%</td><td>IC红 · 低配</td><td>谨慎</td></tr><tr><td>小盘（中证1000）</td><td class="hi">33%</td><td>IM黄 · 标配</td><td>中性</td></tr></tbody></table>
 </div>
 </div>
 <div class="al-op">整体亮红牌 → 整体权益仓位建议控制在 20%-40%（占可投资资产）：逢反弹分批减仓、暂停加仓，保留现金等待整体转黄；红牌对应风格板块低配。 环比因子（贴水/IV vs 近5日均值）仅对操作档位做 ±1 档微调，不改变仓位区间；纪律优先，等待牌区转黄或加仓信号确认后再回补。</div></div>
 <div class="card"><h3>🎯 IV×估值信号（期权隐含波动率 × 估值分位）</h3>
 <table><thead><tr><th>指数</th><th>IV</th><th>IV状态</th><th>3年PE分位</th><th>估值</th><th>信号</th></tr></thead>
-<tbody><tr><td>IF 沪深300</td><td class="hi">18.2%</td><td style="color:#94a3b8">中性→</td><td>—</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IH 上证50</td><td class="hi">15.6%</td><td style="color:#22c55e">缩小↘</td><td>—</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IC 中证500</td><td class="hi">27.3%</td><td style="color:#ef4444">放大↗</td><td>—</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IM 中证1000</td><td class="hi">27.6%</td><td style="color:#ef4444">放大↗</td><td>—</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr></tbody></table>
+<tbody><tr><td>IF 沪深300</td><td class="hi">18.2%</td><td style="color:#94a3b8">中性→</td><td>70%</td><td>高</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IH 上证50</td><td class="hi">15.6%</td><td style="color:#22c55e">缩小↘</td><td>64%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr><tr><td>IC 中证500</td><td class="hi">27.3%</td><td style="color:#ef4444">放大↗</td><td>75%</td><td>高</td><td style="color:#eab308;font-weight:500">谨慎↓</td></tr><tr><td>IM 中证1000</td><td class="hi">27.6%</td><td style="color:#ef4444">放大↗</td><td>67%</td><td>中</td><td style="color:#94a3b8;font-weight:500">中性→</td></tr></tbody></table>
 <div class="al-op">IV 为期权隐含波动率水平（IF/IH/IC 用华证 QVIX 波动率指数收盘，滞后约1个交易日；IM 用中证1000股指期权平值IV）。IV状态按各品种自身历史分位判定（放大=高于70分位、缩小=低于30分位）。IV 放大＋估值低 → 加仓信号（恐惧＋便宜）；IV 缩小＋估值高 → 变盘警惕（乐观＋贵）；信号对风格权重做 ±10% 以内微调，整体仓位区间不受影响。</div></div>
 <div class="g2">
 <div class="card"><h3>IF 沪深300 — 期限结构 <span style="color:var(--ts);font-weight:400;font-size:14px">现货 4552.58</span></h3>
@@ -86,32 +86,32 @@ th:first-child,td:first-child{text-align:left}
 <tr><td>次主</td><td>IF2610</td><td>4509.6</td><td>9,761</td><td>43d</td><td class="neg">-43.0</td><td class="neg">-0.94%</td></tr>
 <tr><td>次主</td><td>IF2612</td><td>4453.6</td><td>89,926</td><td>106d</td><td class="neg">-99.0</td><td class="neg">-2.17%</td></tr>
 <tr><td>隔季</td><td>IF2703</td><td>4380.0</td><td>36,404</td><td>197d</td><td class="neg">-172.6</td><td class="neg">-3.79%</td></tr></tbody></table>
-<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -8.4%<span class="chg2 chg-d2">昨-7.9%</span> ｜ 风格配比：低配。收盘沪深300现货4552.58（+0.10%），主力2609收4536.8，贴水-15.78点，年化贴水-8.44%亮红牌（昨-7.91，恶化0.5pp）；主力持仓13.16万手。大盘风格在整体权益中低配。今日现货微涨但期货跟涨乏力、贴水仍深，维持低配、不接飞刀。</div></div>
+<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -8.4%<span class="chg2 chg-d2">昨-7.9%</span> ｜ 风格配比：低配。收盘沪深300现货4552.58（+0.10%），主力2609收4536.8，贴水-15.78点，年化贴水-8.43%亮红牌（昨-7.91，恶化0.5pp）；主力持仓13.16万手。大盘风格在整体权益中低配。今日现货微涨但期货跟涨乏力、贴水仍深，维持低配、不接飞刀。</div></div>
 <div class="card"><h3>IH 上证50 — 期限结构 <span style="color:var(--ts);font-weight:400;font-size:14px">现货 2919.50</span></h3>
 <table><thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓</th><th>到期</th><th>基差</th><th>基差率</th></tr></thead><tbody>
 <tr style="background:rgba(59,130,246,.06)"><td>主力⭐</td><td>IH2609</td><td>2907.6</td><td>60,885</td><td>15d</td><td class="neg">-11.9</td><td class="neg hi">-0.41%</td></tr>
 <tr><td>次主</td><td>IH2610</td><td>2887.8</td><td>3,930</td><td>43d</td><td class="neg">-31.7</td><td class="neg">-1.09%</td></tr>
 <tr><td>次主</td><td>IH2612</td><td>2844.0</td><td>39,719</td><td>106d</td><td class="neg">-75.5</td><td class="neg">-2.59%</td></tr>
 <tr><td>隔季</td><td>IH2703</td><td>2803.8</td><td>10,362</td><td>197d</td><td class="neg">-115.7</td><td class="neg">-3.96%</td></tr></tbody></table>
-<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -9.9%<span class="chg2 chg-u2">昨-12.2%</span> ｜ 风格配比：低配。收盘上证50现货2919.50（+0.17%），主力2609收2907.6，贴水-11.90点，年化贴水-9.93%亮红牌（昨-12.24，改善2.3pp）；主力持仓6.09万手。大盘风格在整体权益中低配。IH年化贴水-9.93%深于自身红线(-2.35%)，属极深贴水区，但IH历史上限水居多、红线天然偏浅，结合IF看大盘整体低配、等待修复。</div></div>
+<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -9.9%<span class="chg2 chg-u2">昨-12.2%</span> ｜ 风格配比：低配。收盘上证50现货2919.50（+0.17%），主力2609收2907.6，贴水-11.90点，年化贴水-9.92%亮红牌（昨-12.24，改善2.3pp）；主力持仓6.09万手。大盘风格在整体权益中低配。IH年化贴水-9.92%深于自身红线(-2.35%)，属极深贴水区，但IH历史上限水居多、红线天然偏浅，结合IF看大盘整体低配、等待修复。</div></div>
 <div class="card"><h3>IC 中证500 — 期限结构 <span style="color:var(--ts);font-weight:400;font-size:14px">现货 7755.36</span></h3>
 <table><thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓</th><th>到期</th><th>基差</th><th>基差率</th></tr></thead><tbody>
 <tr style="background:rgba(59,130,246,.06)"><td>主力⭐</td><td>IC2609</td><td>7706.2</td><td>144,535</td><td>15d</td><td class="neg">-49.2</td><td class="neg hi">-0.63%</td></tr>
 <tr><td>次主</td><td>IC2610</td><td>7641.6</td><td>14,608</td><td>43d</td><td class="neg">-113.8</td><td class="neg">-1.47%</td></tr>
 <tr><td>次主</td><td>IC2612</td><td>7504.0</td><td>94,564</td><td>106d</td><td class="neg">-251.4</td><td class="neg">-3.24%</td></tr>
 <tr><td>隔季</td><td>IC2703</td><td>7318.0</td><td>36,755</td><td>197d</td><td class="neg">-437.4</td><td class="neg">-5.64%</td></tr></tbody></table>
-<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -15.4%<span class="chg2 chg-u2">昨-15.8%</span> ｜ 风格配比：低配。收盘中证500现货7755.36（+0.34%），主力2609收7706.2，贴水-49.16点，年化贴水-15.42%亮红牌（昨-15.83，四指数最深但微改善0.4pp）；主力持仓14.45万手。中盘风格在整体权益中低配。深度贴水+期权IV高位（平值23.2%）→ 避险/对冲需求集中，坚决不抄底、等企稳信号。</div></div>
+<div class="ab ab-r"><span class="zone zone-r">红牌区</span>年化 -15.4%<span class="chg2 chg-u2">昨-15.8%</span> ｜ 风格配比：低配。收盘中证500现货7755.36（+0.34%），主力2609收7706.2，贴水-49.16点，年化贴水-15.42%亮红牌（昨-15.83，四指数最深但微改善0.4pp）；主力持仓14.45万手。中盘风格在整体权益中低配。深度贴水+判定IV高位（27.34放大）×估值75%高位 → 唯一谨慎信号，避险/对冲需求集中，坚决不抄底、等企稳信号。</div></div>
 <div class="card"><h3>IM 中证1000 — 期限结构 <span style="color:var(--ts);font-weight:400;font-size:14px">现货 7600.10</span></h3>
 <table><thead><tr><th>合约</th><th>代码</th><th>价格</th><th>持仓</th><th>到期</th><th>基差</th><th>基差率</th></tr></thead><tbody>
 <tr style="background:rgba(59,130,246,.06)"><td>主力⭐</td><td>IM2609</td><td>7559.4</td><td>222,689</td><td>15d</td><td class="neg">-40.7</td><td class="neg hi">-0.54%</td></tr>
 <tr><td>次主</td><td>IM2610</td><td>7490.0</td><td>21,391</td><td>43d</td><td class="neg">-110.1</td><td class="neg">-1.45%</td></tr>
 <tr><td>次主</td><td>IM2612</td><td>7335.8</td><td>146,088</td><td>106d</td><td class="neg">-264.3</td><td class="neg">-3.48%</td></tr>
 <tr><td>隔季</td><td>IM2703</td><td>7130.0</td><td>67,622</td><td>197d</td><td class="neg">-470.1</td><td class="neg">-6.18%</td></tr></tbody></table>
-<div class="ab ab-y"><span class="zone zone-y">黄牌区</span>年化 -13.0%<span class="chg2 chg-u2">昨-13.0%</span> ｜ 风格配比：标配。收盘中证1000现货7600.10（+0.22%），主力2609收7559.4，贴水-40.70点，年化贴水-13.03%维持黄牌（昨-13.04，红线-14.96%，缓冲1.9pp仍安全）；主力持仓22.27万手（四指数最高）。小盘风格在整体权益中维持标配。贴水维持黄区、未翻红，维持标配、逢回调分批布局、盯紧边界。</div></div>
+<div class="ab ab-y"><span class="zone zone-y">黄牌区</span>年化 -13.0%<span class="chg2 chg-u2">昨-13.0%</span> ｜ 风格配比：标配。收盘中证1000现货7600.10（+0.22%），主力2609收7559.4，贴水-40.70点，年化贴水-13.03%维持黄牌（昨-13.04，红线-14.96%，缓冲1.9pp仍安全）；主力持仓22.27万手（四指数最高）。小盘风格在整体权益中维持标配。贴水维持黄区、未翻红，但期权平值IV 27.56%仍处高位，维持标配、逢回调分批布局、盯紧边界。</div></div>
 </div>
 <div class="card"><h3>📝 独立分析（牌区 → 风格配比）</h3><div class="an">
-<p><strong>IF — 红牌区（年化 -8.4%）→ 风格配比：低配</strong>。现货4552.58（+0.10%），主力2609收4536.8，贴水-15.78点，年化贴水-8.44%亮红牌（昨-7.91）；主力持仓13.16万手。对应大盘风格低配。</p>
-<p><strong>IH — 红牌区（年化 -9.9%）→ 风格配比：低配</strong>。现货2919.50（+0.17%），主力2609收2907.6，贴水-11.90点，年化贴水-9.93%亮红牌（昨-12.24）；主力持仓6.09万手。对应大盘风格低配。</p>
+<p><strong>IF — 红牌区（年化 -8.4%）→ 风格配比：低配</strong>。现货4552.58（+0.10%），主力2609收4536.8，贴水-15.78点，年化贴水-8.43%亮红牌（昨-7.91）；主力持仓13.16万手。对应大盘风格低配。</p>
+<p><strong>IH — 红牌区（年化 -9.9%）→ 风格配比：低配</strong>。现货2919.50（+0.17%），主力2609收2907.6，贴水-11.90点，年化贴水-9.92%亮红牌（昨-12.24）；主力持仓6.09万手。对应大盘风格低配。</p>
 <p><strong>IC — 红牌区（年化 -15.4%）→ 风格配比：低配</strong>。现货7755.36（+0.34%），主力2609收7706.2，贴水-49.16点，年化贴水-15.42%亮红牌（昨-15.83，四指数最深）；主力持仓14.45万手。对应中盘风格低配。</p>
 <p><strong>IM — 黄牌区（年化 -13.0%）→ 风格配比：标配</strong>。现货7600.10（+0.22%），主力2609收7559.4，贴水-40.70点，年化贴水-13.03%维持黄牌（昨-13.04）；主力持仓22.27万手。对应小盘风格维持标配。</p></div></div>
 <div class="card"><h3>📈 近30个交易日主力合约贴水走势（年化贴水，线段颜色=当日所处牌区）</h3>
@@ -131,7 +131,7 @@ th:first-child,td:first-child{text-align:left}
 <rect x="70" y="16" width="14" height="3" fill="#ef4444" rx="1"/><text x="88" y="20" fill="#94a3b8" font-size="10">红牌区</text><rect x="148" y="16" width="14" height="3" fill="#eab308" rx="1"/><text x="166" y="20" fill="#94a3b8" font-size="10">黄牌区</text><rect x="226" y="16" width="14" height="3" fill="#22c55e" rx="1"/><text x="244" y="20" fill="#94a3b8" font-size="10">绿牌区</text><text x="308" y="20" fill="#94a3b8" font-size="10">线段颜色=当日所处牌区</text>
 </svg></div>
 <div class="an">
-<p>① 牌区结果：IF/IH/IC 三指数亮红牌、IM 维持黄牌（年化-13.03%未深于红线-14.96%，缓冲1.9pp），整体 3红1黄 判红牌。当前处于分红除权季（中期分红9-11月），贴水含部分季节性分红成分，但今日IF/IH/IC贴水仍深、非纯季节性可解释。</p><p>② 仓位建议（占可投资资产）：整体红牌基准区间20%-40%；IV信号分0（估值源不可用、四指数均中性）未触发加减仓 → 维持20%-40%，防守为主、逢反弹分批减仓保留现金。</p><p>③ 操作建议（当前位置）：减仓/轻仓——今日现货全线小幅反弹（沪深300+0.10%、上证50+0.17%、中证500+0.34%、中证1000+0.22%），但期货跟涨乏力、贴水仍深：整体年化-11.7%，较近5日均值-10.7%基本持平、微幅恶化-1.0pp（方向中性）。已有仓位逢反弹降至20%-40%，空仓者暂观望、等待企稳。</p><p>④ 辩证看待：今日为现货修复、期货滞涨的供需性贴水，非系统性恐慌；主力2609临近到期（剩15天）年化读数偏大属机械效应。红牌=风险提示而非看空，深度贴水历史上常对应底部区域，纪律上先降整体仓位、不押注单一风格，风格维持大盘/中盘低配、小盘标配（45.2/22.6/32.3），待整体转黄或IV信号转多再回补。</p>
+<p>① 牌区结果：IF/IH/IC 三指数亮红牌、IM 维持黄牌（年化-13.03%未深于红线-14.96%，缓冲1.9pp），整体 3红1黄 判红牌。当前处于分红除权季（中期分红9-11月），贴水含部分季节性分红成分，但今日IF/IH/IC贴水仍深、非纯季节性可解释。</p><p>② 仓位建议（占可投资资产）：整体红牌基准区间20%-40%；IV信号分-0.5（仅IC谨慎，估值沿用最近收盘分位）未触发加减仓 → 维持20%-40%，防守为主、逢反弹分批减仓保留现金。</p><p>③ 操作建议（当前位置）：减仓/轻仓——今日现货全线小幅反弹（沪深300+0.10%、上证50+0.17%、中证500+0.34%、中证1000+0.22%），但期货跟涨乏力、贴水仍深：整体年化-11.7%，较近5日均值-10.7%基本持平、微幅恶化-1.0pp（方向中性，未触发档位调整）。已有仓位逢反弹降至20%-40%，空仓者暂观望、等待企稳。</p><p>④ 辩证看待：今日为现货修复、期货滞涨的供需性贴水，非系统性恐慌——盘中平值IV全线回落（IF/IH/IC 均降）显示恐慌溢价正在消退，唯IM/IC小中盘隐波仍偏高；主力2609临近到期（剩15天）年化读数偏大属机械效应。红牌=风险提示而非看空，深度贴水历史上常对应底部区域，纪律上先降整体仓位、不押注单一风格，风格维持大盘/中盘低配、小盘标配（45.7/21.7/32.6），待整体转黄或IV信号转多再回补。</p>
 </div></div>
 <div class="card"><h3>📊 近30个交易日期权IV走势（隐含波动率%，线段颜色=当日IV状态）</h3>
 <div style="background:rgba(255,255,255,.02);border:1px solid var(--b);border-radius:8px;padding:16px;margin-bottom:20px">
@@ -150,7 +150,7 @@ th:first-child,td:first-child{text-align:left}
 <rect x="70" y="16" width="14" height="3" fill="#ef4444" rx="1"/><text x="88" y="20" fill="#94a3b8" font-size="10">放大（高于70分位）</text><rect x="218" y="16" width="14" height="3" fill="#eab308" rx="1"/><text x="236" y="20" fill="#94a3b8" font-size="10">中性</text><rect x="366" y="16" width="14" height="3" fill="#22c55e" rx="1"/><text x="384" y="20" fill="#94a3b8" font-size="10">缩小（低于30分位）</text><text x="518" y="20" fill="#94a3b8" font-size="10">线段颜色=当日IV状态</text>
 </svg></div>
 <div class="an">
-<p>① 收盘平值IV：IF 14.94% / IH 12.40% / IC 23.24%（新浪BS反推15:00，510300/510050/510500 ETF期权）/ IM 27.56%（通达信中证1000股指期权MO2609平值7600：购24.02/沽30.85均值）。IM 较昨收27.34%微升约+0.8%，小盘隐波维持高位；IF/IH/IC 平值处年内低位（大盘情绪相对平静）。</p><p>② IV状态判定（QVIX/平值积累口径）：今日估值数据源（mx-ds）不可用，3年PE-TTM估值分位缺失，按「估值未知＝中性」处理，故四指数 IV×估值组合信号均判中性；IV 状态侧 IM 处绝对阈值过渡区（25%~35%，27.56%未触发放大）、IF/IH/IC 依QVIX历史分位判中性。注：华证QVIX源08-31/09-01/09-02值滞后（沿用08-28：IF18.22/IH15.55/IC27.34），数据补入后自动修正。</p><p>③ 与贴水/调仓信号印证：今日现货反弹而期货贴水仍深，属「现货修复、期货跟涨乏力」的供需性贴水，非系统性恐慌；IV信号分0未改变仓位区间。红牌=风险提示而非看空，深度贴水历史上常对应底部区域，纪律上先降整体仓位、不押注单一风格。</p><p style="color:#94a3b8;font-size:12px">※ IM（中证1000）：QVIX 2026-02 后停更，图中近30日仅 8/25 起通达信平值IV（中期缺口），分位样本已由 QVIX 长历史充实</p></div></div>
+<p>① 收盘平值IV：IF 14.94% / IH 12.40% / IC 23.24%（新浪BS反推15:00，510300/510050/510500 ETF期权）/ IM 27.56%（通达信中证1000股指期权MO2609平值7600：购24.02/沽30.85均值）。IM 较昨收27.34%微升约+0.8%，小盘隐波维持高位；IF/IH/IC 平值较昨日明显回落（如IF昨20.2%→今14.9%），大盘/中盘期权情绪降温。</p><p>② IV×估值信号：当日估值数据源（mx-ds）抓取失败，3年PE-TTM分位沿用最近可得收盘分位（09-02：IF 70.01高/IH 64.19中/IC 75.07高/IM 67.13中；PE-TTM两日变动&lt;0.3%，影响可忽略）。判定口径下 IC=IV放大×估值高 → 谨慎↓；IF 中性×高、IH 缩小×中、IM 放大×中 → 中性。注：IV判定沿用QVIX积累口径（IF/IH/IC 为08-28 QVIX 18.22/15.55/27.34，滞后待补；IM 为通达信当日平值27.56），数据补入后自动修正。</p><p>③ 与贴水/调仓信号印证：今日现货反弹而期货贴水仍深，属「现货修复、期货跟涨乏力」的供需性贴水，非系统性恐慌；盘中平值IV全线回落显示恐慌溢价正在消退，仅IC判定口径仍处高位保留谨慎。IV信号分-0.5未改变仓位区间，红牌=风险提示而非看空，深度贴水历史上常对应底部区域，纪律上先降整体仓位、不押注单一风格。</p><p style="color:#94a3b8;font-size:12px">※ IM（中证1000）：QVIX 2026-02 后停更，图中近30日仅 8/25 起通达信平值IV（中期缺口），分位样本已由 QVIX 长历史充实</p></div></div>
 <div class="ft">本报告自动化生成 | 中金所·通达信 | 仅供参考不构成投资建议<br>
 2026-09-03 收盘 | 年化贴水 = 基差率 / (到期天数/365) | 牌区按近3年历史分位标准 | 分红除权季（年报分红5-8月、中期分红9-11月），贴水含部分季节性分红成分<br>
 仓位建议针对股票资产配置，非股指期货持仓建议<br>
