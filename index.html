@@ -43,7 +43,13 @@ th:first-child,td:first-child{text-align:left}
 .al-lb{font-size:12px;color:var(--ts);margin-bottom:8px}
 .al-num{font-size:26px;font-weight:800;margin:4px 0}
 .al-ov{font-size:12px;color:var(--ts);margin-top:6px}
-.al-op{margin-top:14px;padding:12px 14px;border-radius:8px;background:rgba(59,130,246,.08);border-left:3px solid var(--c);font-size:14px;line-height:1.7}</style></head><body>
+.al-op{margin-top:14px;padding:12px 14px;border-radius:8px;background:rgba(59,130,246,.08);border-left:3px solid var(--c);font-size:14px;line-height:1.7}
+.sum-card{border:1px solid rgba(6,182,212,.4);background:rgba(6,182,212,.05)}
+.sum-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.sum-chip{background:rgba(255,255,255,.06);border:1px solid var(--b);border-radius:20px;padding:3px 12px;font-size:12px;color:var(--ts)}
+.sum-sec{border-left:3px solid var(--b);padding:2px 0 2px 14px;margin-top:12px}
+.sum-lb{font-size:12px;color:var(--ts);margin-bottom:6px;font-weight:500;letter-spacing:.5px}
+.sum-p{font-size:14px;line-height:1.85}</style></head><body>
 <h1>📊 股指基差×IV双信号日报</h1>
 <div class="sub">2026-09-08（周二）| 收盘后 | 数据源：中金所·期权（通达信）| ⚠️ 收盘IF/IH/IC红牌、IM黄牌，整体红牌 → 仓位建议维持20%-40%，操作建议减仓/轻仓；结构大盘45.7%、中盘21.7%、小盘32.6%</div>
 <div class="cmp">
@@ -151,6 +157,11 @@ th:first-child,td:first-child{text-align:left}
 </svg></div>
 <div class="an">
 <p>近30日隐含波动率结构分化：IC、IM维持历史偏高分位（放大），IH回落至收缩区间，IF中性，整体未现系统性恐慌升温，但中小盘对冲需求仍浓。</p><p>当日平值IV：IF约21.0%、IH约17.9%、IC约32.2%、IM约28.6%。其中IC、IM处历史偏高分位（放大），IH处偏低分位（缩小），IF中性。</p><p>与贴水、调仓信号印证：中小盘深贴水叠加高IV，反映情绪偏悲观、对冲拥挤，对中小盘风格偏谨慎；IH回落说明大盘对冲降温。IV×估值信号汇总分-0.5（仅IC谨慎），未改变整体红牌仓位区间。</p><p style="color:#94a3b8;font-size:12px">※ IM（中证1000）：QVIX 2026-02 后停更，图中近30日仅 8/25 起通达信平值IV（中期缺口），分位样本已由 QVIX 长历史充实</p></div></div>
+<div class="card sum-card"><h3>📌 今日日报总结</h3>
+<div class="sum-meta"><span class="sum-chip">📅 2026-09-08（周二）</span><span class="sum-chip">🕒 15:15 · 收盘</span><span class="sum-chip">牌区分布：3红1黄0绿</span><span class="sum-chip">IF红牌区 / IH红牌区 / IC红牌区 / IM黄牌区</span><span class="zone zone-r">整体红牌区</span></div>
+<div class="sum-sec" style="border-left-color:#ef4444"><div class="sum-lb">今日基差贴水方向 → 市场情绪</div><div class="sum-p">整体红牌 —— 股指期货深度贴水（年化读数处近3年最深区间），反映市场情绪偏谨慎/防御，对冲避险与空头套保需求占优；按系统语义，深贴水是“风险提示”而非看空信号，历史上多对应阶段底部区域。 环比：贴水较近5日均值基本走平（-0.1pp），情绪未见明显边际变化。 期权IV无急升急降，波动情绪平稳。期权结构上 IC、IM IV 放大、IH IV 缩小。</div></div>
+<div class="sum-sec" style="border-left-color:var(--c)"><div class="sum-lb">当下仓位建议（占可投资资产）</div><div class="sum-p">整体权益 <b style="color:#ef4444">20%-40%</b>，当前操作 <b>减仓/轻仓</b>；风格结构 大盘 46% / 中盘 22% / 小盘 33%（按牌区方向 × IV信号微调）。红牌中性，已有仓位逢反弹减至20%-40%区间，空仓者暂观望</div></div>
+</div>
 <div class="ft">本报告自动化生成 | 中金所·通达信 | 仅供参考不构成投资建议<br>
 2026-09-08 收盘 | 年化贴水 = 基差率 / (到期天数/365) | 牌区按近3年历史分位标准 | 分红除权季（年报分红5-8月、中期分红9-11月），贴水含部分季节性分红成分<br>
 仓位建议针对股票资产配置，非股指期货持仓建议<br>
